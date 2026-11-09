@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T08:10:42Z",
-  "evidence_as_of": "2026-11-09T08:10:42Z",
+  "generated_at": "2026-11-09T08:45:55Z",
+  "evidence_as_of": "2026-11-09T08:45:55Z",
   "project": {
     "title": "Weight-Space Programming for Robotics",
     "subtitle": "Can an agent diagnose and repair robot policies through targeted weight edits?",
@@ -14,8 +14,8 @@
     "ties": 0,
     "significance_known_runs": 35,
     "significant_gains": 21,
-    "active_experiments": 9,
-    "queued_experiments": 30,
+    "active_experiments": 0,
+    "queued_experiments": 0,
     "planned_experiments": 2
   },
   "results": [
@@ -1334,9 +1334,10 @@
       "progress": null,
       "notes": [
         "Diagnostic development screen only; not a primary repair or held-out result.",
-        "Native runtime gate must pass before downstream task screens can be released."
+        "Native runtime gate must pass before downstream task screens can be released.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "lingbot_va-place_dual_shoes-stock-screen",
@@ -1351,9 +1352,10 @@
       "progress": null,
       "notes": [
         "Diagnostic development screen only; not a primary repair or held-out result.",
-        "Native runtime gate must pass before downstream task screens can be released."
+        "Native runtime gate must pass before downstream task screens can be released.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "lingbot_va-place_phone_stand-stock-screen",
@@ -1368,9 +1370,10 @@
       "progress": null,
       "notes": [
         "Diagnostic development screen only; not a primary repair or held-out result.",
-        "Native runtime gate must pass before downstream task screens can be released."
+        "Native runtime gate must pass before downstream task screens can be released.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "lingbot_va-put_object_cabinet-stock-screen",
@@ -1385,9 +1388,10 @@
       "progress": null,
       "notes": [
         "Diagnostic development screen only; not a primary repair or held-out result.",
-        "Native runtime gate must pass before downstream task screens can be released."
+        "Native runtime gate must pass before downstream task screens can be released.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "lingbot_va-turn_switch-native-gate",
@@ -1398,14 +1402,15 @@
       "method": "native",
       "method_label": "Native-pipeline validation",
       "kind": "native_check",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
         "Native runtime gate must pass before downstream task screens can be released.",
         "Native GPU evaluation has not produced a validated outcome.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes.",
         "Native-pipeline evaluation is pending; no native transfer result is claimed."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "lingbot_va-turn_switch-terra-1",
@@ -1436,9 +1441,10 @@
       "progress": null,
       "notes": [
         "Native-pipeline evaluation is pending; no native transfer result is claimed.",
-        "Native GPU evaluation has not produced a validated outcome."
+        "Native GPU evaluation has not produced a validated outcome.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05-click_alarmclock-py-cross",
@@ -1449,14 +1455,15 @@
       "method": "py",
       "method_label": "Python-only weight-editing agent",
       "kind": "side_effect",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
         "Cross-task development evaluation of a frozen edit; not an additional held-out repair result.",
         "Cross-task evaluation uses a fresh unedited control for this frozen repair.",
-        "Target tasks: Click bell, Pick dual bottles, Handover block, Place can in basket, Stamp seal. Planned 20 episodes per side per task."
+        "Target tasks: Click bell, Pick dual bottles, Handover block, Place can in basket, Stamp seal. Planned 20 episodes per side per task.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05-click_alarmclock-terra-s2",
@@ -1517,10 +1524,12 @@
       "method": "terraBias",
       "method_label": "Full tools · bias-only edits",
       "kind": "comparison",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
-      "notes": [],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "notes": [
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
+      ],
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05-click_alarmclock-terraMlp-1",
@@ -1548,10 +1557,12 @@
       "method": "terraOutput",
       "method_label": "Full tools · output-only edits",
       "kind": "comparison",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
-      "notes": [],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "notes": [
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
+      ],
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05-click_bell-native-validation",
@@ -1566,9 +1577,10 @@
       "progress": null,
       "notes": [
         "Native-pipeline evaluation is pending; no native transfer result is claimed.",
-        "Native GPU evaluation has not produced a validated outcome."
+        "Native GPU evaluation has not produced a validated outcome.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05-click_bell-terra-cross",
@@ -1647,10 +1659,12 @@
       "method": "terraBias",
       "method_label": "Full tools · bias-only edits",
       "kind": "comparison",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
-      "notes": [],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "notes": [
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
+      ],
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05-click_bell-terraOutput-1",
@@ -1661,10 +1675,12 @@
       "method": "terraOutput",
       "method_label": "Full tools · output-only edits",
       "kind": "comparison",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
-      "notes": [],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "notes": [
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
+      ],
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05-handover_block-native-validation",
@@ -1692,20 +1708,15 @@
       "method": "py",
       "method_label": "Python-only weight-editing agent",
       "kind": "comparison",
-      "stage": "queued",
-      "progress": {
-        "phase": "Held-out evaluation",
-        "completed": null,
-        "requested": null,
-        "charged": 400,
-        "budget": 400
-      },
+      "stage": "held",
+      "progress": null,
       "notes": [
         "Search completion is not a validated result; complete paired held-out evaluation remains required.",
         "One of six fixed-task Python tool-suite comparisons, including non-significant outcomes; historical selection was not preregistered.",
-        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+        "Continuation preserves the same scientific run and development budget; not an independent repeat.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05-handover_block-qwen-s1",
@@ -1928,14 +1939,15 @@
       "method": "py",
       "method_label": "Python-only weight-editing agent",
       "kind": "side_effect",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
         "Cross-task development evaluation of a frozen edit; not an additional held-out repair result.",
         "Cross-task evaluation uses a fresh unedited control for this frozen repair.",
-        "Target tasks: Click bell, Click alarm clock, Handover block, Place can in basket, Stamp seal. Planned 20 episodes per side per task."
+        "Target tasks: Click bell, Click alarm clock, Handover block, Place can in basket, Stamp seal. Planned 20 episodes per side per task.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05-pick_dual_bottles-terra-cross",
@@ -2014,10 +2026,12 @@
       "method": "terraBias",
       "method_label": "Full tools · bias-only edits",
       "kind": "comparison",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
-      "notes": [],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "notes": [
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
+      ],
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05-pick_dual_bottles-terraMlp-1",
@@ -2044,10 +2058,12 @@
       "method": "terraOutput",
       "method_label": "Full tools · output-only edits",
       "kind": "comparison",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
-      "notes": [],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "notes": [
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
+      ],
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05-place_a2b_left-terraAttn-1",
@@ -2467,12 +2483,13 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "primary",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
-        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+        "Continuation preserves the same scientific run and development budget; not an independent repeat.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05_sf-stamp_seal-bb-winner1",
@@ -2483,19 +2500,14 @@
       "method": "bb",
       "method_label": "Black-box weight-editing agent",
       "kind": "comparison",
-      "stage": "running",
-      "progress": {
-        "phase": "Development search",
-        "completed": 72,
-        "requested": 100,
-        "charged": 300,
-        "budget": 400
-      },
+      "stage": "held",
+      "progress": null,
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
-        "Progress counts completed work, not successful episodes or a validated result."
+        "Progress counts completed work, not successful episodes or a validated result.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T07:58:47Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05_sf-stamp_seal-native-validation",
@@ -2506,15 +2518,16 @@
       "method": "native",
       "method_label": "Native-pipeline validation",
       "kind": "native_check",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
         "Native-pipeline evaluation is pending; no native transfer result is claimed.",
         "Planned native comparison: 100 unedited and 100 edited episodes; distinct from the 200-layout lab evaluation.",
         "Native GPU evaluation has not produced a validated outcome.",
-        "CPU conversion passed; this is not a native GPU result."
+        "CPU conversion passed; this is not a native GPU result.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05_sf-stamp_seal-py-winner1",
@@ -2525,19 +2538,14 @@
       "method": "py",
       "method_label": "Python-only weight-editing agent",
       "kind": "comparison",
-      "stage": "running",
-      "progress": {
-        "phase": "Development search",
-        "completed": 100,
-        "requested": 100,
-        "charged": 140,
-        "budget": 400
-      },
+      "stage": "held",
+      "progress": null,
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
-        "Progress counts completed work, not successful episodes or a validated result."
+        "Progress counts completed work, not successful episodes or a validated result.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T07:58:47Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05_sf-stamp_seal-qwen-winner1",
@@ -2564,14 +2572,15 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "side_effect",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
         "Cross-task development evaluation of a frozen edit; not an additional held-out repair result.",
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
-        "Target tasks: Handover block, Place A to B (right), Place can in basket, Put bottles in dustbin, Turn switch. Planned 20 episodes per side per task."
+        "Target tasks: Handover block, Place A to B (right), Place can in basket, Put bottles in dustbin, Turn switch. Planned 20 episodes per side per task.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05_sf-stamp_seal-terra-winner_r1",
@@ -2582,20 +2591,15 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "repeat",
-      "stage": "running",
-      "progress": {
-        "phase": "Development search",
-        "completed": 67,
-        "requested": 100,
-        "charged": 128,
-        "budget": 400
-      },
+      "stage": "held",
+      "progress": null,
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
         "A separately initialized agent attempt is planned; a continuation is not an independent repeat.",
-        "Progress counts completed work, not successful episodes or a validated result."
+        "Progress counts completed work, not successful episodes or a validated result.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T07:58:47Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05_sf-stamp_seal-terra-winner_r2",
@@ -2606,13 +2610,14 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "repeat",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
-        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05_sf-stamp_seal-terraAttn-winner1",
@@ -2623,19 +2628,14 @@
       "method": "terraAttn",
       "method_label": "Full tools · attention-only edits",
       "kind": "comparison",
-      "stage": "running",
-      "progress": {
-        "phase": "Development search",
-        "completed": 20,
-        "requested": 100,
-        "charged": 324,
-        "budget": 400
-      },
+      "stage": "held",
+      "progress": null,
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
-        "Progress counts completed work, not successful episodes or a validated result."
+        "Progress counts completed work, not successful episodes or a validated result.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T07:58:47Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05_sf-stamp_seal-terraMlp-winner1",
@@ -2646,19 +2646,14 @@
       "method": "terraMlp",
       "method_label": "Full tools · MLP-only edits",
       "kind": "comparison",
-      "stage": "running",
-      "progress": {
-        "phase": "Development search",
-        "completed": 96,
-        "requested": 100,
-        "charged": 276,
-        "budget": 400
-      },
+      "stage": "held",
+      "progress": null,
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
-        "Progress counts completed work, not successful episodes or a validated result."
+        "Progress counts completed work, not successful episodes or a validated result.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T07:58:47Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "pi05_sf-stamp_seal-terraOutput-winner1",
@@ -2669,19 +2664,14 @@
       "method": "terraOutput",
       "method_label": "Full tools · output-only edits",
       "kind": "comparison",
-      "stage": "running",
-      "progress": {
-        "phase": "Development search",
-        "completed": 13,
-        "requested": 30,
-        "charged": 270,
-        "budget": 400
-      },
+      "stage": "held",
+      "progress": null,
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
-        "Progress counts completed work, not successful episodes or a validated result."
+        "Progress counts completed work, not successful episodes or a validated result.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T07:58:47Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xiaomi_r0-handover_block-terra-1",
@@ -2692,19 +2682,14 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "primary",
-      "stage": "running",
-      "progress": {
-        "phase": "Held-out evaluation",
-        "completed": null,
-        "requested": null,
-        "charged": 400,
-        "budget": 400
-      },
+      "stage": "held",
+      "progress": null,
       "notes": [
         "Search completion is not a validated result; complete paired held-out evaluation remains required.",
-        "Progress counts completed work, not successful episodes or a validated result."
+        "Progress counts completed work, not successful episodes or a validated result.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T07:58:47Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xiaomi_r0-pick_dual_bottles-bb-winner1",
@@ -2715,12 +2700,13 @@
       "method": "bb",
       "method_label": "Black-box weight-editing agent",
       "kind": "comparison",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
-        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xiaomi_r0-pick_dual_bottles-native-validation",
@@ -2731,15 +2717,16 @@
       "method": "native",
       "method_label": "Native-pipeline validation",
       "kind": "native_check",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
         "Native-pipeline evaluation is pending; no native transfer result is claimed.",
         "Planned native comparison: 100 unedited and 100 edited episodes; distinct from the 200-layout lab evaluation.",
         "Native GPU evaluation has not produced a validated outcome.",
-        "The native check must account for an added zero-initialized output bias, not a pretrained bias."
+        "The native check must account for an added zero-initialized output bias, not a pretrained bias.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xiaomi_r0-pick_dual_bottles-py-winner1",
@@ -2750,12 +2737,13 @@
       "method": "py",
       "method_label": "Python-only weight-editing agent",
       "kind": "comparison",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
-        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xiaomi_r0-pick_dual_bottles-qwen-winner1",
@@ -2782,14 +2770,15 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "side_effect",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
         "Cross-task development evaluation of a frozen edit; not an additional held-out repair result.",
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
-        "Target tasks: Handover block, Place can in basket, Stamp seal, Move playing card away, Turn switch. Planned 20 episodes per side per task."
+        "Target tasks: Handover block, Place can in basket, Stamp seal, Move playing card away, Turn switch. Planned 20 episodes per side per task.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xiaomi_r0-pick_dual_bottles-terra-winner_r1",
@@ -2800,13 +2789,14 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "repeat",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
-        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xiaomi_r0-pick_dual_bottles-terra-winner_r2",
@@ -2817,13 +2807,14 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "repeat",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
-        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xiaomi_r0-pick_dual_bottles-terraAttn-winner1",
@@ -2834,12 +2825,13 @@
       "method": "terraAttn",
       "method_label": "Full tools · attention-only edits",
       "kind": "comparison",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
-        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xiaomi_r0-pick_dual_bottles-terraBias-winner1",
@@ -2850,12 +2842,13 @@
       "method": "terraBias",
       "method_label": "Full tools · bias-only edits",
       "kind": "comparison",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
-        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xiaomi_r0-pick_dual_bottles-terraMlp-winner1",
@@ -2866,12 +2859,13 @@
       "method": "terraMlp",
       "method_label": "Full tools · MLP-only edits",
       "kind": "comparison",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
-        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xiaomi_r0-pick_dual_bottles-terraOutput-winner1",
@@ -2882,12 +2876,13 @@
       "method": "terraOutput",
       "method_label": "Full tools · output-only edits",
       "kind": "comparison",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
-        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xiaomi_r0-place_can_basket-terra-1",
@@ -2898,19 +2893,14 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "primary",
-      "stage": "running",
-      "progress": {
-        "phase": "Held-out evaluation",
-        "completed": null,
-        "requested": null,
-        "charged": 240,
-        "budget": 400
-      },
+      "stage": "held",
+      "progress": null,
       "notes": [
         "Search completion is not a validated result; complete paired held-out evaluation remains required.",
-        "Progress counts completed work, not successful episodes or a validated result."
+        "Progress counts completed work, not successful episodes or a validated result.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T07:58:47Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xiaomi_r0-stamp_seal-terra-1",
@@ -2943,18 +2933,13 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "primary",
-      "stage": "running",
-      "progress": {
-        "phase": "Development baseline collection",
-        "completed": null,
-        "requested": null,
-        "charged": null,
-        "budget": 400
-      },
+      "stage": "held",
+      "progress": null,
       "notes": [
-        "Progress counts completed work, not successful episodes or a validated result."
+        "Progress counts completed work, not successful episodes or a validated result.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T07:58:47Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xvla-click_alarmclock-terra-1",
@@ -2965,13 +2950,14 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "primary",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
         "Search completion is not a validated result; complete paired held-out evaluation remains required.",
-        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+        "Continuation preserves the same scientific run and development budget; not an independent repeat.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xvla-handover_block-terra-1",
@@ -2982,12 +2968,13 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "primary",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
-        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+        "Continuation preserves the same scientific run and development budget; not an independent repeat.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xvla-pick_dual_bottles-terra-1",
@@ -2998,13 +2985,14 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "primary",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
         "Search completion is not a validated result; complete paired held-out evaluation remains required.",
-        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+        "Continuation preserves the same scientific run and development budget; not an independent repeat.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xvla-place_can_basket-terra-1",
@@ -3015,12 +3003,13 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "primary",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
-        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+        "Continuation preserves the same scientific run and development budget; not an independent repeat.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xvla-stamp_seal-terra-1",
@@ -3031,13 +3020,14 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "primary",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
         "Search completion is not a validated result; complete paired held-out evaluation remains required.",
-        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+        "Continuation preserves the same scientific run and development budget; not an independent repeat.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xvla-turn_switch-terra-1",
@@ -3048,12 +3038,13 @@
       "method": "terra",
       "method_label": "Full tools · frontier agent",
       "kind": "primary",
-      "stage": "queued",
+      "stage": "held",
       "progress": null,
       "notes": [
-        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+        "Continuation preserves the same scientific run and development budget; not an independent repeat.",
+        "Paused at the user's request. No experiment restart is authorized until the user explicitly resumes."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T08:45:55Z"
     },
     {
       "id": "xwam-handover_block-terra-1",
