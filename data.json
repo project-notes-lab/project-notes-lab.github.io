@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T07:58:47Z",
-  "evidence_as_of": "2026-11-09T07:58:47Z",
+  "generated_at": "2026-11-09T08:10:42Z",
+  "evidence_as_of": "2026-11-09T08:10:42Z",
   "project": {
     "title": "Weight-Space Programming for Robotics",
     "subtitle": "Can an agent diagnose and repair robot policies through targeted weight edits?",
     "status": "Ongoing preliminary simulation research"
   },
   "summary": {
-    "validated_runs": 34,
-    "numerical_gains": 31,
+    "validated_runs": 35,
+    "numerical_gains": 32,
     "regressions": 3,
     "ties": 0,
-    "significance_known_runs": 34,
+    "significance_known_runs": 35,
     "significant_gains": 21,
-    "active_experiments": 10,
+    "active_experiments": 9,
     "queued_experiments": 30,
     "planned_experiments": 2
   },
@@ -73,7 +73,7 @@
         "Development baseline/search include pre-isolation execution. Separately isolated held-out cohorts remain accepted; this does not demonstrate corrupted outcomes.",
         "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
       ],
-      "observed_at": "2026-11-09T07:58:05Z",
+      "observed_at": "2026-11-09T08:10:42Z",
       "source_freshness": "recently_verified"
     },
     {
@@ -184,7 +184,7 @@
         "Development baseline/search include pre-isolation execution. Separately isolated held-out cohorts remain accepted; this does not demonstrate corrupted outcomes.",
         "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
       ],
-      "observed_at": "2026-11-09T07:58:05Z",
+      "observed_at": "2026-11-09T08:10:42Z",
       "source_freshness": "recently_verified"
     },
     {
@@ -485,7 +485,7 @@
         "Development baseline/search include pre-isolation execution. Separately isolated held-out cohorts remain accepted; this does not demonstrate corrupted outcomes.",
         "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
       ],
-      "observed_at": "2026-11-09T07:58:05Z",
+      "observed_at": "2026-11-09T08:10:42Z",
       "source_freshness": "recently_verified"
     },
     {
@@ -928,6 +928,33 @@
       "source_freshness": "recently_verified"
     },
     {
+      "id": "xiaomi_r0-move_playingcard_away-terra-1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "move_playingcard_away",
+      "task_label": "Move playing card away",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 149,
+      "edited_successes": 156,
+      "episodes_per_side": 200,
+      "delta_pp": 3.5,
+      "p_value": 0.16151331846754213,
+      "ci95_pp": [
+        -1.5,
+        8.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "not_significant",
+      "notes": [
+        "Edits a newly introduced zero-initialized output-bias vector, not a pretrained bias parameter."
+      ],
+      "observed_at": "2026-11-09T08:10:42Z",
+      "source_freshness": "recently_verified"
+    },
+    {
       "id": "xiaomi_r0-pick_dual_bottles-terra-1",
       "policy": "xiaomi_r0",
       "policy_label": "Xiaomi-Robotics-0",
@@ -953,7 +980,7 @@
         "Native-pipeline evaluation is pending; no native transfer result is claimed.",
         "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
       ],
-      "observed_at": "2026-11-09T07:58:05Z",
+      "observed_at": "2026-11-09T08:10:42Z",
       "source_freshness": "recently_verified"
     }
   ],
@@ -2526,7 +2553,7 @@
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
       ],
-      "observed_at": "2026-11-09T07:58:05Z"
+      "observed_at": "2026-11-09T08:10:42Z"
     },
     {
       "id": "pi05_sf-stamp_seal-terra-cross",
@@ -2680,29 +2707,6 @@
       "observed_at": "2026-11-09T07:58:47Z"
     },
     {
-      "id": "xiaomi_r0-move_playingcard_away-terra-1",
-      "policy": "xiaomi_r0",
-      "policy_label": "Xiaomi-Robotics-0",
-      "task": "move_playingcard_away",
-      "task_label": "Move playing card away",
-      "method": "terra",
-      "method_label": "Full tools · frontier agent",
-      "kind": "primary",
-      "stage": "running",
-      "progress": {
-        "phase": "Held-out evaluation",
-        "completed": 53,
-        "requested": 100,
-        "charged": 400,
-        "budget": 400
-      },
-      "notes": [
-        "Search completion is not a validated result; complete paired held-out evaluation remains required.",
-        "Progress counts completed work, not successful episodes or a validated result."
-      ],
-      "observed_at": "2026-11-09T07:58:47Z"
-    },
-    {
       "id": "xiaomi_r0-pick_dual_bottles-bb-winner1",
       "policy": "xiaomi_r0",
       "policy_label": "Xiaomi-Robotics-0",
@@ -2767,7 +2771,7 @@
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
       ],
-      "observed_at": "2026-11-09T07:58:05Z"
+      "observed_at": "2026-11-09T08:10:42Z"
     },
     {
       "id": "xiaomi_r0-pick_dual_bottles-terra-cross",
