@@ -10,6 +10,7 @@ const dateFormat = new Intl.DateTimeFormat("en", {
 const stages = {
   running: "Running", queued: "Queued", held: "Held", planned: "Planned",
   awaiting_evaluation: "Awaiting evaluation", status_unverified: "Status unverified",
+  no_edit: "Completed · no edit",
 };
 const kinds = {
   primary: "Primary experiment", comparison: "Toolset / scope comparison", repeat: "Repeat",
@@ -22,7 +23,7 @@ const statistics = {
 const freshnessLabels = {
   recently_verified: "Recently verified", retained_snapshot: "Retained snapshot; not freshly reverified",
 };
-const stageOrder = ["running", "awaiting_evaluation", "queued", "held", "planned", "status_unverified"];
+const stageOrder = ["running", "awaiting_evaluation", "queued", "held", "planned", "no_edit", "status_unverified"];
 
 function element(tag, className, text) {
   const node = document.createElement(tag);
