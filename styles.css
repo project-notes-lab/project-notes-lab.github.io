@@ -95,6 +95,22 @@ summary { cursor: pointer; }
 .protocol-details ol { padding-left: 22px; color: var(--muted); }
 .protocol-details li { padding-left: 10px; margin-block: 15px; }
 .protocol-details li strong { color: var(--ink); display: block; }
+.architecture-diagram { display: block; width: 100%; min-width: 900px; height: auto; color: var(--green); }
+.architecture-box { fill: var(--white); stroke: var(--line); }
+.architecture-lab { fill: var(--soft-green); stroke: var(--line); }
+.architecture-label { fill: var(--ink); font-family: "Segoe UI", sans-serif; font-size: 14px; }
+.architecture-title { font-size: 17px; font-weight: 650; }
+.architecture-arrows { fill: none; stroke: var(--green); stroke-width: 1.8; }
+.architecture-boundary { fill: none; stroke: var(--orange); stroke-width: 2; stroke-dasharray: 6 5; }
+.architecture-boundary-label { fill: var(--orange); font-size: 13px; font-family: "Segoe UI", sans-serif; font-weight: 650; letter-spacing: .05em; }
+.architecture-evaluator { fill: var(--soft-orange); stroke: var(--line); }
+.architecture-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr)); gap: 30px 50px; margin-block: 35px; }
+.architecture-details p, .architecture-tools p { font-size: 14px; color: var(--muted); margin-top: 12px; }
+.architecture-details code, .architecture-tools code { color: var(--green); font-size: .92em; overflow-wrap: anywhere; }
+.architecture-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; }
+.architecture-tools article { padding: 22px; border-radius: var(--radius); background: var(--soft-green); }
+.architecture-tools h3 { font-size: 16px; }
+.architecture-note { font-size: 12px; color: var(--muted); margin-top: 20px; }
 .results-section { background: #efeee8; }
 .metrics-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-bottom: 24px; }
 .metric { padding: 24px; background: var(--paper); }

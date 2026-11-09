@@ -6,15 +6,15 @@
   <meta name="description" content="An ongoing research project exploring whether automated diagnosis and targeted weight edits can improve robot policies. Method, complete held-out results, and experiment status.">
   <meta name="theme-color" content="#f7f6f2">
   <title>Weight-Space Programming for Robotics</title>
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./app.js" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=2">
+  <script src="./app.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="wordmark" href="#main" aria-label="Weight-space programming home"><span class="brand-symbol" aria-hidden="true">w↗</span> WEIGHT-SPACE <span class="wordmark-light">/ ROBOTICS</span></a>
     <nav aria-label="Main navigation">
-      <a href="#method">Method</a><a href="#results">Results</a><a href="#experiments">Experiments</a><a href="#limitations">Limitations</a>
+      <a href="#method">Method</a><a href="#architecture">Architecture</a><a href="#results">Results</a><a href="#experiments">Experiments</a><a href="#limitations">Limitations</a>
     </nav>
   </header>
 
@@ -70,6 +70,83 @@
       </div>
       <div id="toolsets" class="toolset-grid" aria-label="Agent toolsets"></div>
       <details class="protocol-details"><summary>Read the protocol stages</summary><ol id="method-stages"><li>Protocol details load with the published snapshot.</li></ol></details>
+    </section>
+
+    <section id="architecture" class="section-shell section-block" aria-labelledby="architecture-heading">
+      <div class="section-heading"><div><p class="eyebrow">THE FULL AGENT HARNESS</p><h2 id="architecture-heading">Inside the full agent.</h2></div><p class="section-intro">One reasoning agent, two complementary ways to investigate: custom Python and a curated interpretability toolkit. A policy-aware laboratory connects both to the model, recorded evidence, and simulator.</p></div>
+      <figure class="method-figure architecture-figure" tabindex="0" aria-label="Full-agent harness architecture; scroll horizontally on smaller screens">
+        <svg class="architecture-diagram" viewBox="0 0 1000 680" role="img" aria-labelledby="architecture-diagram-title architecture-diagram-description">
+          <title id="architecture-diagram-title">Full-agent harness: Codex, MCP laboratory, policy backends, simulation, and separate evaluation</title>
+          <desc id="architecture-diagram-description">A single LLM runs in the Codex CLI agent loop and exchanges tool calls and evidence with an MCP laboratory. The same agent can use curated behavior, activation, causal, and editing tools or write custom Python with the full Lab object. The laboratory uses policy-specific backend declarations and hooks. A simulator policy adapter loads saved tensor edits, while recordings return to the laboratory. Run state preserves the notebook, budget, logs, and resumable thread. After the run finishes, a separate evaluator compares baseline and edited policies on held-out layouts.</desc>
+          <defs><marker id="harness-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker></defs>
+          <g class="architecture-box">
+            <rect x="20" y="30" width="250" height="155" rx="8"/>
+            <rect x="20" y="250" width="250" height="150" rx="8"/>
+            <rect x="350" y="280" width="630" height="80" rx="8"/>
+            <rect x="350" y="420" width="300" height="90" rx="8"/>
+            <rect x="690" y="420" width="290" height="90" rx="8"/>
+          </g>
+          <rect class="architecture-lab" x="350" y="20" width="630" height="210" rx="10"/>
+          <g class="architecture-box"><rect x="370" y="80" width="280" height="105" rx="6"/><rect x="670" y="80" width="290" height="105" rx="6"/></g>
+          <g class="architecture-label" text-anchor="middle">
+            <text class="architecture-title" x="145" y="65">LLM + Codex CLI</text>
+            <text x="145" y="96">Reason → call tools → inspect</text>
+            <text x="145" y="123">Task prompt + context management</text>
+            <text x="145" y="154">Frontier or local model</text>
+            <text class="architecture-title" x="665" y="53">MCP laboratory · both paths available to the same agent</text>
+            <text class="architecture-title" x="510" y="110">Curated toolkit</text>
+            <text x="510" y="138">Behavior · activations · causal probes</text>
+            <text x="510" y="163">Attribution + weight-edit recipes</text>
+            <text class="architecture-title" x="815" y="110">Custom Python</text>
+            <text x="815" y="138">Full Lab object + NumPy / PyTorch</text>
+            <text x="815" y="163">Write analyses, replay, save edits</text>
+            <text x="665" y="211">Shared Lab API: loaded policy · recordings · replay · edit operations</text>
+            <text class="architecture-title" x="145" y="281">Persistent run state</text>
+            <text x="145" y="310">Resumable thread + notebook</text>
+            <text x="145" y="338">Episode budget + tool-call log</text>
+            <text x="145" y="367">Hypotheses, evidence, saved edits</text>
+            <text class="architecture-title" x="665" y="310">PolicyBackend + generic recording / intervention hooks</text>
+            <text x="665" y="338">Model streams · action semantics · parameter names · capabilities · edit scopes</text>
+            <text class="architecture-title" x="500" y="449">RoboTwin / RoboDojo</text>
+            <text x="500" y="475">XPolicyLab policy adapter</text>
+            <text x="500" y="497">Budgeted development rollouts</text>
+            <text class="architecture-title" x="835" y="449">Saved tensor edits</text>
+            <text x="835" y="475">Parameter changes + edit manifest</text>
+            <text x="835" y="497">Applied on top of base weights</text>
+          </g>
+          <g class="architecture-arrows" marker-end="url(#harness-arrow)">
+            <path d="M275 116 H345" marker-start="url(#harness-arrow)"/>
+            <path d="M145 190 V244" marker-start="url(#harness-arrow)"/>
+            <path d="M665 235 V275" marker-start="url(#harness-arrow)"/>
+            <path d="M500 365 V415"/>
+            <path d="M835 365 V415"/>
+            <path d="M685 465 H655"/>
+            <path d="M345 465 H310 V200 H345"/>
+            <path d="M835 515 V573"/>
+          </g>
+          <g class="architecture-label" text-anchor="middle"><text x="309" y="97">MCP</text><text x="194" y="224">resume</text></g>
+          <text class="architecture-label" x="300" y="373" text-anchor="middle" transform="rotate(-90 300 373)">recorded rollout evidence</text>
+          <path class="architecture-boundary" d="M680 558 H990"/>
+          <text class="architecture-boundary-label" x="350" y="593">OUTSIDE THE AGENT LOOP</text>
+          <text class="architecture-label" x="350" y="619">Finish the run; freeze the submitted edit.</text>
+          <text class="architecture-label" x="350" y="645">Held-out scores are not development feedback.</text>
+          <rect class="architecture-evaluator" x="690" y="580" width="290" height="80" rx="8"/>
+          <g class="architecture-label" text-anchor="middle"><text class="architecture-title" x="835" y="608">Separate held-out evaluator</text><text x="835" y="635">Paired baseline vs. edited policy</text></g>
+        </svg>
+        <figcaption>Logical components, not a shared-memory process diagram: the laboratory and simulator policy worker load separate model instances. Saved edits bridge those instances; recorded inputs and outcomes return as evidence. Scroll horizontally on smaller screens.</figcaption>
+      </figure>
+      <div class="architecture-details">
+        <article><h3>01 / Agent execution</h3><p>Codex CLI supplies the reasoning/tool-call loop and context management. A per-run driver supplies the task, baseline summary, episode budget, and any edit-scope restriction, and can resume the same thread after interruption. This is one research agent per experiment—not a planner–coder–critic swarm.</p><p>In this configuration, the agent’s code execution is the laboratory’s <code>python</code> tool. Codex shell, browser, and nested-agent features are disabled; custom analysis code is not.</p></article>
+        <article><h3>02 / Full capability, not a fixed recipe</h3><p>The full agent can call curated tools, write new analysis code, or combine both. Its Python environment exposes the full <code>Lab</code> object: model parameters, hooks, recorded episodes, replay, analysis methods, and <code>lab.save_edit</code>.</p><p>The Python-only ablation uses the same Python execution mechanism but exposes a <code>RawLab</code> view without the ready-made analyses. It retains the raw ingredients for interpretability and weight editing.</p></article>
+        <article><h3>03 / Policy-aware laboratory</h3><p>Each backend declares model streams, hook sites, output/action semantics, supported capabilities, and editable parameter scopes. Generic tools use those declarations rather than assuming every VLA or WAM has the same architecture. Unsupported tools are not registered.</p><p>Recordings include actions, robot state, camera data, model inputs, noise seeds, and activation summaries. Replay supports targeted interventions and richer activation capture for diagnosis; it is not a claim that all simulator physics is deterministic.</p></article>
+        <article><h3>04 / Evidence and evaluation</h3><p>Development rollouts consume the episode budget. The run retains tool-call logs, notes, figures, and an edit manifest. A diagnostic activation intervention is not itself the submitted policy: the final change must be saved as parameter edits.</p><p>After the agent run finishes, a separate runner evaluates the original and edited policies on paired held-out layouts. Reporting checks cohort completeness and identity before accepting a result. Native-pipeline and side-effect checks are additional validation, not assumed guarantees.</p></article>
+      </div>
+      <div class="architecture-tools" aria-label="Examples of the full agent’s curated tools">
+        <article><h3>Inspect behavior &amp; features</h3><p><code>failure_breakdown</code>, <code>view_episode</code>, <code>contrast_neurons</code>, <code>feature_drive</code></p><p>Connect task failures to phases, actions, and internal features.</p></article>
+        <article><h3>Test a causal hypothesis</h3><p><code>intervene</code>, <code>ablation_scan</code>, <code>activation_patch</code>, <code>attribution</code></p><p>Probe whether a candidate component actually changes the policy’s output.</p></article>
+        <article><h3>Implement &amp; test a repair</h3><p><code>edit_project_out</code>, <code>edit_head_project</code>, <code>bake_intervention</code>, <code>rollout</code></p><p>Turn a finding into saved weights, then test the edited policy in simulation.</p></article>
+      </div>
+      <p class="architecture-note">Tool examples are capability-dependent. Closed-form fits and diagnostic gradients are permitted; gradient-based parameter fitting, fine-tuning, and LoRA remain outside the agent-editing protocol.</p>
     </section>
 
     <section id="results" class="section-block results-section" aria-labelledby="results-heading">

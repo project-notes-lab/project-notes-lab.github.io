@@ -313,6 +313,8 @@ async function loadSnapshot() {
     renderInventory(data);
     setControlsDisabled(false);
     notice.hidden = true;
+    // Data-dependent sections can move the fragment target after the browser's initial scroll.
+    document.getElementById(window.location.hash.slice(1))?.scrollIntoView({ behavior: "instant", block: "start" });
   } catch {
     notice.classList.add("error");
     notice.replaceChildren(element("p", "", "The published snapshot could not be loaded. Results and experiment statuses are unavailable—not zero. You can retry, or use the JSON and CSV download links below. This static site must be served over HTTP(S), rather than opened as a local file."));
