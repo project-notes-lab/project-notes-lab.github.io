@@ -1,0 +1,3345 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-09T05:22:28Z",
+  "evidence_as_of": "2026-11-09T05:22:28Z",
+  "project": {
+    "title": "Weight-Space Programming for Robotics",
+    "subtitle": "Can an agent diagnose and repair robot policies through targeted weight edits?",
+    "status": "Ongoing preliminary simulation research"
+  },
+  "summary": {
+    "validated_runs": 32,
+    "numerical_gains": 29,
+    "regressions": 3,
+    "ties": 0,
+    "significance_known_runs": 32,
+    "significant_gains": 21,
+    "active_experiments": 10,
+    "queued_experiments": 33,
+    "planned_experiments": 2
+  },
+  "results": [
+    {
+      "id": "pi05-click_alarmclock-bb-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_alarmclock",
+      "task_label": "Click alarm clock",
+      "method": "bb",
+      "method_label": "Black-box weight-editing agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 110,
+      "edited_successes": 188,
+      "episodes_per_side": 200,
+      "delta_pp": 39.0,
+      "p_value": 1.7318831363782608e-17,
+      "ci95_pp": [
+        31.5,
+        46.0
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-click_alarmclock-py-comparison1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_alarmclock",
+      "task_label": "Click alarm clock",
+      "method": "py",
+      "method_label": "Python-only weight-editing agent",
+      "cohort": "fixed_comparison",
+      "cohort_label": "Fixed-task tool-suite comparison",
+      "baseline_successes": 106,
+      "edited_successes": 192,
+      "episodes_per_side": 200,
+      "delta_pp": 43.0,
+      "p_value": 1.799356393745168e-20,
+      "ci95_pp": [
+        36.0,
+        50.0
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "One of six fixed-task Python tool-suite comparisons, including non-significant outcomes; historical selection was not preregistered.",
+        "Development baseline/search include pre-isolation execution. Separately isolated held-out cohorts remain accepted; this does not demonstrate corrupted outcomes.",
+        "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
+      ],
+      "observed_at": "2026-11-09T04:05:20Z",
+      "source_freshness": "recently_verified"
+    },
+    {
+      "id": "pi05-click_alarmclock-qwen-s1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_alarmclock",
+      "task_label": "Click alarm clock",
+      "method": "qwen",
+      "method_label": "Full tools · Qwen3.8-27B",
+      "cohort": "informed_transfer",
+      "cohort_label": "Informed transfer (not independent discovery)",
+      "baseline_successes": 110,
+      "edited_successes": 200,
+      "episodes_per_side": 200,
+      "delta_pp": 45.0,
+      "p_value": 2.381600164396281e-21,
+      "ci95_pp": [
+        38.0,
+        51.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Agent read and mirrored the frontier agent's same-task solution. This is informed transfer, not independent discovery; no held-out leak is established.",
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-click_alarmclock-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_alarmclock",
+      "task_label": "Click alarm clock",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 110,
+      "edited_successes": 200,
+      "episodes_per_side": 200,
+      "delta_pp": 45.0,
+      "p_value": 2.381600164396281e-21,
+      "ci95_pp": [
+        38.0,
+        51.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-click_bell-bb-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_bell",
+      "task_label": "Click bell",
+      "method": "bb",
+      "method_label": "Black-box weight-editing agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 42,
+      "edited_successes": 200,
+      "episodes_per_side": 200,
+      "delta_pp": 79.0,
+      "p_value": 3.094859520436728e-36,
+      "ci95_pp": [
+        73.0,
+        84.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-click_bell-py-comparison1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_bell",
+      "task_label": "Click bell",
+      "method": "py",
+      "method_label": "Python-only weight-editing agent",
+      "cohort": "fixed_comparison",
+      "cohort_label": "Fixed-task tool-suite comparison",
+      "baseline_successes": 47,
+      "edited_successes": 199,
+      "episodes_per_side": 200,
+      "delta_pp": 76.0,
+      "p_value": 6.336157706308879e-35,
+      "ci95_pp": [
+        70.0,
+        81.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "One of six fixed-task Python tool-suite comparisons, including non-significant outcomes; historical selection was not preregistered.",
+        "Development baseline/search include pre-isolation execution. Separately isolated held-out cohorts remain accepted; this does not demonstrate corrupted outcomes.",
+        "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
+      ],
+      "observed_at": "2026-11-09T04:05:20Z",
+      "source_freshness": "recently_verified"
+    },
+    {
+      "id": "pi05-click_bell-qwen-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_bell",
+      "task_label": "Click bell",
+      "method": "qwen",
+      "method_label": "Full tools · Qwen3.8-27B",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 42,
+      "edited_successes": 167,
+      "episodes_per_side": 200,
+      "delta_pp": 62.5,
+      "p_value": 3.035890538320324e-25,
+      "ci95_pp": [
+        54.5,
+        70.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-click_bell-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_bell",
+      "task_label": "Click bell",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 42,
+      "edited_successes": 200,
+      "episodes_per_side": 200,
+      "delta_pp": 79.0,
+      "p_value": 3.094859520436728e-36,
+      "ci95_pp": [
+        73.0,
+        84.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-click_bell-terraMlp-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_bell",
+      "task_label": "Click bell",
+      "method": "terraMlp",
+      "method_label": "Full tools · MLP-only edits",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 42,
+      "edited_successes": 200,
+      "episodes_per_side": 200,
+      "delta_pp": 79.0,
+      "p_value": 3.094859520436728e-36,
+      "ci95_pp": [
+        73.0,
+        84.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-handover_block-bb-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "bb",
+      "method_label": "Black-box weight-editing agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 86,
+      "edited_successes": 135,
+      "episodes_per_side": 200,
+      "delta_pp": 24.5,
+      "p_value": 1.4935616946831648e-07,
+      "ci95_pp": [
+        16.0,
+        33.0
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-handover_block-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 86,
+      "edited_successes": 162,
+      "episodes_per_side": 200,
+      "delta_pp": 38.0,
+      "p_value": 1.6265506684350553e-14,
+      "ci95_pp": [
+        30.0,
+        46.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-move_can_pot-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "move_can_pot",
+      "task_label": "Move can to pot",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 123,
+      "edited_successes": 129,
+      "episodes_per_side": 200,
+      "delta_pp": 3.0,
+      "p_value": 0.3034836640248423,
+      "ci95_pp": [
+        -2.5,
+        9.0
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "not_significant",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-move_pillbottle_pad-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "move_pillbottle_pad",
+      "task_label": "Move pill bottle to pad",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 92,
+      "edited_successes": 112,
+      "episodes_per_side": 200,
+      "delta_pp": 10.0,
+      "p_value": 0.0002607296328553162,
+      "ci95_pp": [
+        5.0,
+        15.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-move_playingcard_away-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "move_playingcard_away",
+      "task_label": "Move playing card away",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 158,
+      "edited_successes": 156,
+      "episodes_per_side": 200,
+      "delta_pp": -1.0,
+      "p_value": 0.7316005889599013,
+      "ci95_pp": [
+        -6.5,
+        4.5125
+      ],
+      "numerical_outcome": "regression",
+      "statistical_outcome": "not_significant",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity.",
+        "Numerical regression retained; the edit is not an improvement on this task."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-open_microwave-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "open_microwave",
+      "task_label": "Open microwave",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 176,
+      "edited_successes": 168,
+      "episodes_per_side": 200,
+      "delta_pp": -4.0,
+      "p_value": 0.1305700181157362,
+      "ci95_pp": [
+        -9.0,
+        1.0
+      ],
+      "numerical_outcome": "regression",
+      "statistical_outcome": "not_significant",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity.",
+        "Numerical regression retained; the edit is not an improvement on this task."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-pick_dual_bottles-bb-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "bb",
+      "method_label": "Black-box weight-editing agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 151,
+      "edited_successes": 200,
+      "episodes_per_side": 200,
+      "delta_pp": 24.5,
+      "p_value": 2.55962508777167e-12,
+      "ci95_pp": [
+        18.5,
+        30.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-pick_dual_bottles-py-comparison1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "py",
+      "method_label": "Python-only weight-editing agent",
+      "cohort": "fixed_comparison",
+      "cohort_label": "Fixed-task tool-suite comparison",
+      "baseline_successes": 154,
+      "edited_successes": 199,
+      "episodes_per_side": 200,
+      "delta_pp": 22.5,
+      "p_value": 5.2409704151961906e-11,
+      "ci95_pp": [
+        17.0,
+        28.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "One of six fixed-task Python tool-suite comparisons, including non-significant outcomes; historical selection was not preregistered.",
+        "Development baseline/search include pre-isolation execution. Separately isolated held-out cohorts remain accepted; this does not demonstrate corrupted outcomes.",
+        "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
+      ],
+      "observed_at": "2026-11-09T04:05:20Z",
+      "source_freshness": "recently_verified"
+    },
+    {
+      "id": "pi05-pick_dual_bottles-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 151,
+      "edited_successes": 200,
+      "episodes_per_side": 200,
+      "delta_pp": 24.5,
+      "p_value": 2.55962508777167e-12,
+      "ci95_pp": [
+        18.5,
+        30.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-place_bread_basket-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_bread_basket",
+      "task_label": "Place bread in basket",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 126,
+      "edited_successes": 115,
+      "episodes_per_side": 200,
+      "delta_pp": -5.5,
+      "p_value": 0.08581278065055215,
+      "ci95_pp": [
+        -12.0,
+        0.5
+      ],
+      "numerical_outcome": "regression",
+      "statistical_outcome": "not_significant",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity.",
+        "Numerical regression retained; the edit is not an improvement on this task."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-place_can_basket-py-comparison1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "py",
+      "method_label": "Python-only weight-editing agent",
+      "cohort": "fixed_comparison",
+      "cohort_label": "Fixed-task tool-suite comparison",
+      "baseline_successes": 113,
+      "edited_successes": 133,
+      "episodes_per_side": 200,
+      "delta_pp": 10.0,
+      "p_value": 0.013823023820376638,
+      "ci95_pp": [
+        2.5,
+        18.0
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "not_significant",
+      "notes": [
+        "One of six fixed-task Python tool-suite comparisons, including non-significant outcomes; historical selection was not preregistered.",
+        "Operator-side harness/adapter files changed during development; whether already-running processes reloaded them is unverified.",
+        "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
+      ],
+      "observed_at": "2026-11-09T04:05:20Z",
+      "source_freshness": "recently_verified"
+    },
+    {
+      "id": "pi05-place_can_basket-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 115,
+      "edited_successes": 149,
+      "episodes_per_side": 200,
+      "delta_pp": 17.0,
+      "p_value": 2.850271715238914e-05,
+      "ci95_pp": [
+        9.5,
+        24.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-place_object_scale-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_object_scale",
+      "task_label": "Place object on scale",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 139,
+      "edited_successes": 156,
+      "episodes_per_side": 200,
+      "delta_pp": 8.5,
+      "p_value": 0.019536652109900614,
+      "ci95_pp": [
+        1.5,
+        15.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "not_significant",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-place_phone_stand-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_phone_stand",
+      "task_label": "Place phone on stand",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 137,
+      "edited_successes": 150,
+      "episodes_per_side": 200,
+      "delta_pp": 6.5,
+      "p_value": 0.0236351019828339,
+      "ci95_pp": [
+        1.0,
+        12.0
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "not_significant",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-rotate_qrcode-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "rotate_qrcode",
+      "task_label": "Rotate QR code",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 178,
+      "edited_successes": 180,
+      "episodes_per_side": 200,
+      "delta_pp": 1.0,
+      "p_value": 0.6547208460185769,
+      "ci95_pp": [
+        -3.5,
+        5.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "not_significant",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-stamp_seal-py-comparison1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "py",
+      "method_label": "Python-only weight-editing agent",
+      "cohort": "fixed_comparison",
+      "cohort_label": "Fixed-task tool-suite comparison",
+      "baseline_successes": 97,
+      "edited_successes": 121,
+      "episodes_per_side": 200,
+      "delta_pp": 12.0,
+      "p_value": 0.0013406411172294783,
+      "ci95_pp": [
+        5.0,
+        19.0
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "One of six fixed-task Python tool-suite comparisons, including non-significant outcomes; historical selection was not preregistered.",
+        "Operator-side harness/adapter files changed during development; whether already-running processes reloaded them is unverified.",
+        "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
+      ],
+      "observed_at": "2026-11-09T04:05:20Z",
+      "source_freshness": "recently_verified"
+    },
+    {
+      "id": "pi05-stamp_seal-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 90,
+      "edited_successes": 133,
+      "episodes_per_side": 200,
+      "delta_pp": 21.5,
+      "p_value": 6.862595155314497e-07,
+      "ci95_pp": [
+        13.5,
+        29.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05-turn_switch-terra-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "turn_switch",
+      "task_label": "Turn switch",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 103,
+      "edited_successes": 120,
+      "episodes_per_side": 200,
+      "delta_pp": 8.5,
+      "p_value": 0.002263469812035174,
+      "ci95_pp": [
+        3.0,
+        14.0
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Historical cohorts lack some explicit policy/checkpoint metadata; present-day auditing cannot reconstruct immutable historical identity."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z",
+      "source_freshness": "retained_snapshot"
+    },
+    {
+      "id": "pi05_sf-handover_block-terra-1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 157,
+      "edited_successes": 162,
+      "episodes_per_side": 200,
+      "delta_pp": 2.5,
+      "p_value": 0.456056540250256,
+      "ci95_pp": [
+        -4.0,
+        9.0
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "not_significant",
+      "notes": [
+        "Native-pipeline evaluation is pending; no native transfer result is claimed."
+      ],
+      "observed_at": "2026-11-09T04:05:20Z",
+      "source_freshness": "recently_verified"
+    },
+    {
+      "id": "pi05_sf-place_a2b_right-terra-1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "place_a2b_right",
+      "task_label": "Place A to B (right)",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 121,
+      "edited_successes": 131,
+      "episodes_per_side": 200,
+      "delta_pp": 5.0,
+      "p_value": 0.03300625766123251,
+      "ci95_pp": [
+        0.5,
+        9.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "not_significant",
+      "notes": [
+        "Native-pipeline evaluation is pending; no native transfer result is claimed."
+      ],
+      "observed_at": "2026-11-09T04:05:20Z",
+      "source_freshness": "recently_verified"
+    },
+    {
+      "id": "pi05_sf-stamp_seal-terra-1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 96,
+      "edited_successes": 125,
+      "episodes_per_side": 200,
+      "delta_pp": 14.5,
+      "p_value": 0.0004808746178788025,
+      "ci95_pp": [
+        6.5,
+        22.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Native-pipeline evaluation is pending; no native transfer result is claimed."
+      ],
+      "observed_at": "2026-11-09T04:05:20Z",
+      "source_freshness": "recently_verified"
+    },
+    {
+      "id": "pi05_sf-turn_switch-terra-1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "turn_switch",
+      "task_label": "Turn switch",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 75,
+      "edited_successes": 80,
+      "episodes_per_side": 200,
+      "delta_pp": 2.5,
+      "p_value": 0.36917141633269157,
+      "ci95_pp": [
+        -3.0,
+        8.0
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "not_significant",
+      "notes": [
+        "Native-pipeline evaluation is pending; no native transfer result is claimed."
+      ],
+      "observed_at": "2026-11-09T04:05:20Z",
+      "source_freshness": "recently_verified"
+    },
+    {
+      "id": "xiaomi_r0-pick_dual_bottles-terra-1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 130,
+      "edited_successes": 200,
+      "episodes_per_side": 200,
+      "delta_pp": 35.0,
+      "p_value": 5.930445850082486e-17,
+      "ci95_pp": [
+        28.5,
+        42.0
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "significant_gain",
+      "notes": [
+        "Changes one element of a newly introduced zero-initialized output-bias vector, not a pretrained bias parameter.",
+        "Native-pipeline evaluation is pending; no native transfer result is claimed.",
+        "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
+      ],
+      "observed_at": "2026-11-09T04:05:20Z",
+      "source_freshness": "recently_verified"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "ahawam-handover_block-terra-1",
+      "policy": "ahawam",
+      "policy_label": "AHA-WAM",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "ahawam-pick_dual_bottles-terra-1",
+      "policy": "ahawam",
+      "policy_label": "AHA-WAM",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "ahawam-place_can_basket-terra-1",
+      "policy": "ahawam",
+      "policy_label": "AHA-WAM",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "ahawam-stamp_seal-terra-1",
+      "policy": "ahawam",
+      "policy_label": "AHA-WAM",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "ahawam-turn_switch-terra-1",
+      "policy": "ahawam",
+      "policy_label": "AHA-WAM",
+      "task": "turn_switch",
+      "task_label": "Turn switch",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "eventvla-handover_block-terra-1",
+      "policy": "eventvla",
+      "policy_label": "EventVLA",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "eventvla-move_playingcard_away-terra-1",
+      "policy": "eventvla",
+      "policy_label": "EventVLA",
+      "task": "move_playingcard_away",
+      "task_label": "Move playing card away",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "eventvla-pick_dual_bottles-terra-1",
+      "policy": "eventvla",
+      "policy_label": "EventVLA",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "eventvla-place_can_basket-terra-1",
+      "policy": "eventvla",
+      "policy_label": "EventVLA",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "eventvla-stamp_seal-terra-1",
+      "policy": "eventvla",
+      "policy_label": "EventVLA",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "eventvla-turn_switch-terra-1",
+      "policy": "eventvla",
+      "policy_label": "EventVLA",
+      "task": "turn_switch",
+      "task_label": "Turn switch",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "fastwam-handover_block-terra-1",
+      "policy": "fastwam",
+      "policy_label": "FastWAM",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "fastwam-place_can_basket-terra-1",
+      "policy": "fastwam",
+      "policy_label": "FastWAM",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "fastwam-stamp_seal-terra-1",
+      "policy": "fastwam",
+      "policy_label": "FastWAM",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "fastwam-turn_switch-terra-1",
+      "policy": "fastwam",
+      "policy_label": "FastWAM",
+      "task": "turn_switch",
+      "task_label": "Turn switch",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "galaxea-click_alarmclock-terra-1",
+      "policy": "galaxea",
+      "policy_label": "GalaxeaVLA G0Plus",
+      "task": "click_alarmclock",
+      "task_label": "Click alarm clock",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "galaxea-click_bell-terra-1",
+      "policy": "galaxea",
+      "policy_label": "GalaxeaVLA G0Plus",
+      "task": "click_bell",
+      "task_label": "Click bell",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "galaxea-pick_dual_bottles-terra-1",
+      "policy": "galaxea",
+      "policy_label": "GalaxeaVLA G0Plus",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "galaxea-place_can_basket-terra-1",
+      "policy": "galaxea",
+      "policy_label": "GalaxeaVLA G0Plus",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "galaxea-stamp_seal-terra-1",
+      "policy": "galaxea",
+      "policy_label": "GalaxeaVLA G0Plus",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "galaxea-turn_switch-terra-1",
+      "policy": "galaxea",
+      "policy_label": "GalaxeaVLA G0Plus",
+      "task": "turn_switch",
+      "task_label": "Turn switch",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "lingbot_va-blocks_ranking_size-stock-screen",
+      "policy": "lingbot_va",
+      "policy_label": "LingBot-VA",
+      "task": "blocks_ranking_size",
+      "task_label": "Rank blocks by size",
+      "method": "stock",
+      "method_label": "Unedited stock-policy screen",
+      "kind": "screen",
+      "stage": "held",
+      "progress": null,
+      "notes": [
+        "Diagnostic development screen only; not a primary repair or held-out result.",
+        "Native runtime gate must pass before downstream task screens can be released."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "lingbot_va-place_dual_shoes-stock-screen",
+      "policy": "lingbot_va",
+      "policy_label": "LingBot-VA",
+      "task": "place_dual_shoes",
+      "task_label": "Place dual shoes",
+      "method": "stock",
+      "method_label": "Unedited stock-policy screen",
+      "kind": "screen",
+      "stage": "held",
+      "progress": null,
+      "notes": [
+        "Diagnostic development screen only; not a primary repair or held-out result.",
+        "Native runtime gate must pass before downstream task screens can be released."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "lingbot_va-place_phone_stand-stock-screen",
+      "policy": "lingbot_va",
+      "policy_label": "LingBot-VA",
+      "task": "place_phone_stand",
+      "task_label": "Place phone on stand",
+      "method": "stock",
+      "method_label": "Unedited stock-policy screen",
+      "kind": "screen",
+      "stage": "held",
+      "progress": null,
+      "notes": [
+        "Diagnostic development screen only; not a primary repair or held-out result.",
+        "Native runtime gate must pass before downstream task screens can be released."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "lingbot_va-put_object_cabinet-stock-screen",
+      "policy": "lingbot_va",
+      "policy_label": "LingBot-VA",
+      "task": "put_object_cabinet",
+      "task_label": "Put object in cabinet",
+      "method": "stock",
+      "method_label": "Unedited stock-policy screen",
+      "kind": "screen",
+      "stage": "held",
+      "progress": null,
+      "notes": [
+        "Diagnostic development screen only; not a primary repair or held-out result.",
+        "Native runtime gate must pass before downstream task screens can be released."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "lingbot_va-turn_switch-native-gate",
+      "policy": "lingbot_va",
+      "policy_label": "LingBot-VA",
+      "task": "turn_switch",
+      "task_label": "Turn switch",
+      "method": "native",
+      "method_label": "Native-pipeline validation",
+      "kind": "native_check",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Native runtime gate must pass before downstream task screens can be released.",
+        "Native GPU evaluation has not produced a validated outcome.",
+        "Native-pipeline evaluation is pending; no native transfer result is claimed."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "lingbot_va-turn_switch-terra-1",
+      "policy": "lingbot_va",
+      "policy_label": "LingBot-VA",
+      "task": "turn_switch",
+      "task_label": "Turn switch",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-click_alarmclock-native-validation",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_alarmclock",
+      "task_label": "Click alarm clock",
+      "method": "native",
+      "method_label": "Native-pipeline validation",
+      "kind": "native_check",
+      "stage": "held",
+      "progress": null,
+      "notes": [
+        "Native-pipeline evaluation is pending; no native transfer result is claimed.",
+        "Native GPU evaluation has not produced a validated outcome."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05-click_alarmclock-py-cross",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_alarmclock",
+      "task_label": "Click alarm clock",
+      "method": "py",
+      "method_label": "Python-only weight-editing agent",
+      "kind": "side_effect",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Cross-task development evaluation of a frozen edit; not an additional held-out repair result.",
+        "Cross-task evaluation uses a fresh unedited control for this frozen repair.",
+        "Target tasks: Click bell, Pick dual bottles, Handover block, Place can in basket, Stamp seal. Planned 20 episodes per side per task."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05-click_alarmclock-terra-s2",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_alarmclock",
+      "task_label": "Click alarm clock",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-click_alarmclock-terra-s3",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_alarmclock",
+      "task_label": "Click alarm clock",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-click_alarmclock-terraAttn-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_alarmclock",
+      "task_label": "Click alarm clock",
+      "method": "terraAttn",
+      "method_label": "Full tools · attention-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-click_alarmclock-terraBias-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_alarmclock",
+      "task_label": "Click alarm clock",
+      "method": "terraBias",
+      "method_label": "Full tools · bias-only edits",
+      "kind": "comparison",
+      "stage": "queued",
+      "progress": null,
+      "notes": [],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05-click_alarmclock-terraMlp-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_alarmclock",
+      "task_label": "Click alarm clock",
+      "method": "terraMlp",
+      "method_label": "Full tools · MLP-only edits",
+      "kind": "comparison",
+      "stage": "awaiting_evaluation",
+      "progress": null,
+      "notes": [
+        "Search completion is not a validated result; complete paired held-out evaluation remains required.",
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:31Z"
+    },
+    {
+      "id": "pi05-click_alarmclock-terraOutput-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_alarmclock",
+      "task_label": "Click alarm clock",
+      "method": "terraOutput",
+      "method_label": "Full tools · output-only edits",
+      "kind": "comparison",
+      "stage": "queued",
+      "progress": null,
+      "notes": [],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05-click_bell-native-validation",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_bell",
+      "task_label": "Click bell",
+      "method": "native",
+      "method_label": "Native-pipeline validation",
+      "kind": "native_check",
+      "stage": "held",
+      "progress": null,
+      "notes": [
+        "Native-pipeline evaluation is pending; no native transfer result is claimed.",
+        "Native GPU evaluation has not produced a validated outcome."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05-click_bell-terra-cross",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_bell",
+      "task_label": "Click bell",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "side_effect",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "Cross-task development evaluation of a frozen edit; not an additional held-out repair result.",
+        "Retained broader cross-task study; some pairs are already complete. Remaining coverage is unverified, not a new repeat of those pairs."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-click_bell-terra-s2",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_bell",
+      "task_label": "Click bell",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-click_bell-terra-s3",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_bell",
+      "task_label": "Click bell",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-click_bell-terraAttn-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_bell",
+      "task_label": "Click bell",
+      "method": "terraAttn",
+      "method_label": "Full tools · attention-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-click_bell-terraBias-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_bell",
+      "task_label": "Click bell",
+      "method": "terraBias",
+      "method_label": "Full tools · bias-only edits",
+      "kind": "comparison",
+      "stage": "queued",
+      "progress": null,
+      "notes": [],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05-click_bell-terraOutput-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "click_bell",
+      "task_label": "Click bell",
+      "method": "terraOutput",
+      "method_label": "Full tools · output-only edits",
+      "kind": "comparison",
+      "stage": "queued",
+      "progress": null,
+      "notes": [],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05-handover_block-native-validation",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "native",
+      "method_label": "Native-pipeline validation",
+      "kind": "native_check",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "Native-pipeline evaluation is pending; no native transfer result is claimed."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-handover_block-py-comparison1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "py",
+      "method_label": "Python-only weight-editing agent",
+      "kind": "comparison",
+      "stage": "queued",
+      "progress": {
+        "phase": "Held-out evaluation",
+        "completed": null,
+        "requested": null,
+        "charged": 400,
+        "budget": 400
+      },
+      "notes": [
+        "Search completion is not a validated result; complete paired held-out evaluation remains required.",
+        "One of six fixed-task Python tool-suite comparisons, including non-significant outcomes; historical selection was not preregistered.",
+        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05-handover_block-qwen-s1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "qwen",
+      "method_label": "Full tools · Qwen3.8-27B",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-handover_block-terra-s2",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-handover_block-terra-s3",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-handover_block-terraAttn-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "terraAttn",
+      "method_label": "Full tools · attention-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-handover_block-terraBias-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "terraBias",
+      "method_label": "Full tools · bias-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-handover_block-terraMlp-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "terraMlp",
+      "method_label": "Full tools · MLP-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-handover_block-terraOutput-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "terraOutput",
+      "method_label": "Full tools · output-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-hanging_mug-terraAttn-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "hanging_mug",
+      "task_label": "Hang mug",
+      "method": "terraAttn",
+      "method_label": "Full tools · attention-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-hanging_mug-terraMlp-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "hanging_mug",
+      "task_label": "Hang mug",
+      "method": "terraMlp",
+      "method_label": "Full tools · MLP-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-move_can_pot-terraAttn-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "move_can_pot",
+      "task_label": "Move can to pot",
+      "method": "terraAttn",
+      "method_label": "Full tools · attention-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-move_can_pot-terraMlp-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "move_can_pot",
+      "task_label": "Move can to pot",
+      "method": "terraMlp",
+      "method_label": "Full tools · MLP-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-move_pillbottle_pad-native-validation",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "move_pillbottle_pad",
+      "task_label": "Move pill bottle to pad",
+      "method": "native",
+      "method_label": "Native-pipeline validation",
+      "kind": "native_check",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "Native-pipeline evaluation is pending; no native transfer result is claimed."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-pick_dual_bottles-native-validation",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "native",
+      "method_label": "Native-pipeline validation",
+      "kind": "native_check",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "Native-pipeline evaluation is pending; no native transfer result is claimed."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-pick_dual_bottles-py-cross",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "py",
+      "method_label": "Python-only weight-editing agent",
+      "kind": "side_effect",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Cross-task development evaluation of a frozen edit; not an additional held-out repair result.",
+        "Cross-task evaluation uses a fresh unedited control for this frozen repair.",
+        "Target tasks: Click bell, Click alarm clock, Handover block, Place can in basket, Stamp seal. Planned 20 episodes per side per task."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05-pick_dual_bottles-terra-cross",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "side_effect",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "Cross-task development evaluation of a frozen edit; not an additional held-out repair result.",
+        "Retained broader cross-task study; some pairs are already complete. Remaining coverage is unverified, not a new repeat of those pairs."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-pick_dual_bottles-terra-s2",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-pick_dual_bottles-terra-s3",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-pick_dual_bottles-terraAttn-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terraAttn",
+      "method_label": "Full tools · attention-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-pick_dual_bottles-terraBias-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terraBias",
+      "method_label": "Full tools · bias-only edits",
+      "kind": "comparison",
+      "stage": "queued",
+      "progress": null,
+      "notes": [],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05-pick_dual_bottles-terraMlp-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terraMlp",
+      "method_label": "Full tools · MLP-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-pick_dual_bottles-terraOutput-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terraOutput",
+      "method_label": "Full tools · output-only edits",
+      "kind": "comparison",
+      "stage": "queued",
+      "progress": null,
+      "notes": [],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05-place_a2b_left-terraAttn-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_a2b_left",
+      "task_label": "Place A to B (left)",
+      "method": "terraAttn",
+      "method_label": "Full tools · attention-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-place_a2b_left-terraMlp-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_a2b_left",
+      "task_label": "Place A to B (left)",
+      "method": "terraMlp",
+      "method_label": "Full tools · MLP-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-place_bread_basket-terraAttn-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_bread_basket",
+      "task_label": "Place bread in basket",
+      "method": "terraAttn",
+      "method_label": "Full tools · attention-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-place_bread_basket-terraMlp-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_bread_basket",
+      "task_label": "Place bread in basket",
+      "method": "terraMlp",
+      "method_label": "Full tools · MLP-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-place_can_basket-bb-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "bb",
+      "method_label": "Black-box weight-editing agent",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-place_can_basket-native-validation",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "native",
+      "method_label": "Native-pipeline validation",
+      "kind": "native_check",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "Native-pipeline evaluation is pending; no native transfer result is claimed."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-place_can_basket-qwen-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "qwen",
+      "method_label": "Full tools · Qwen3.8-27B",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-place_can_basket-terra-s2",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-place_can_basket-terra-s3",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-place_can_basket-terraAttn-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terraAttn",
+      "method_label": "Full tools · attention-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-place_can_basket-terraBias-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terraBias",
+      "method_label": "Full tools · bias-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-place_can_basket-terraMlp-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terraMlp",
+      "method_label": "Full tools · MLP-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-place_can_basket-terraOutput-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terraOutput",
+      "method_label": "Full tools · output-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-place_mouse_pad-terra-2",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "place_mouse_pad",
+      "task_label": "Place mouse on pad",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "awaiting_evaluation",
+      "progress": null,
+      "notes": [
+        "Search completion is not a validated result; complete paired held-out evaluation remains required.",
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-put_bottles_dustbin-terra-2",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "put_bottles_dustbin",
+      "task_label": "Put bottles in dustbin",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "awaiting_evaluation",
+      "progress": null,
+      "notes": [
+        "Search completion is not a validated result; complete paired held-out evaluation remains required.",
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-stamp_seal-bb-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "bb",
+      "method_label": "Black-box weight-editing agent",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-stamp_seal-native-validation",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "native",
+      "method_label": "Native-pipeline validation",
+      "kind": "native_check",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "Native-pipeline evaluation is pending; no native transfer result is claimed."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-stamp_seal-qwen-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "qwen",
+      "method_label": "Full tools · Qwen3.8-27B",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-stamp_seal-terra-s2",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-stamp_seal-terra-s3",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-stamp_seal-terraAttn-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terraAttn",
+      "method_label": "Full tools · attention-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-stamp_seal-terraBias-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terraBias",
+      "method_label": "Full tools · bias-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-stamp_seal-terraMlp-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terraMlp",
+      "method_label": "Full tools · MLP-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-stamp_seal-terraOutput-1",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terraOutput",
+      "method_label": "Full tools · output-only edits",
+      "kind": "comparison",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05-turn_switch-native-validation",
+      "policy": "pi05",
+      "policy_label": "π0.5",
+      "task": "turn_switch",
+      "task_label": "Turn switch",
+      "method": "native",
+      "method_label": "Native-pipeline validation",
+      "kind": "native_check",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified.",
+        "Native-pipeline evaluation is pending; no native transfer result is claimed."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "pi05_sf-place_can_basket-terra-1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "running",
+      "progress": {
+        "phase": "Held-out evaluation",
+        "completed": 22,
+        "requested": 100,
+        "charged": 390,
+        "budget": 400
+      },
+      "notes": [
+        "Search completion is not a validated result; complete paired held-out evaluation remains required.",
+        "Progress counts completed work, not successful episodes or a validated result."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05_sf-put_bottles_dustbin-terra-1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "put_bottles_dustbin",
+      "task_label": "Put bottles in dustbin",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05_sf-stamp_seal-bb-winner1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "bb",
+      "method_label": "Black-box weight-editing agent",
+      "kind": "comparison",
+      "stage": "running",
+      "progress": {
+        "phase": "Development search",
+        "completed": 20,
+        "requested": 20,
+        "charged": 20,
+        "budget": 400
+      },
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "Progress counts completed work, not successful episodes or a validated result."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05_sf-stamp_seal-native-validation",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "native",
+      "method_label": "Native-pipeline validation",
+      "kind": "native_check",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Native-pipeline evaluation is pending; no native transfer result is claimed.",
+        "Planned native comparison: 100 unedited and 100 edited episodes; distinct from the 200-layout lab evaluation.",
+        "Native GPU evaluation has not produced a validated outcome.",
+        "CPU conversion passed; this is not a native GPU result."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05_sf-stamp_seal-py-winner1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "py",
+      "method_label": "Python-only weight-editing agent",
+      "kind": "comparison",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05_sf-stamp_seal-qwen-winner1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "qwen",
+      "method_label": "Full tools · Qwen3.8-27B",
+      "kind": "comparison",
+      "stage": "planned",
+      "progress": null,
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+      ],
+      "observed_at": "2026-11-09T04:05:20Z"
+    },
+    {
+      "id": "pi05_sf-stamp_seal-terra-cross",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "side_effect",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Cross-task development evaluation of a frozen edit; not an additional held-out repair result.",
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "Target tasks: Handover block, Place A to B (right), Place can in basket, Put bottles in dustbin, Turn switch. Planned 20 episodes per side per task."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05_sf-stamp_seal-terra-winner_r1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05_sf-stamp_seal-terra-winner_r2",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05_sf-stamp_seal-terraAttn-winner1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terraAttn",
+      "method_label": "Full tools · attention-only edits",
+      "kind": "comparison",
+      "stage": "running",
+      "progress": {
+        "phase": "Development search",
+        "completed": 4,
+        "requested": 24,
+        "charged": 24,
+        "budget": 400
+      },
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "Progress counts completed work, not successful episodes or a validated result."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05_sf-stamp_seal-terraBias-winner1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terraBias",
+      "method_label": "Full tools · bias-only edits",
+      "kind": "comparison",
+      "stage": "running",
+      "progress": {
+        "phase": "Development search",
+        "completed": 25,
+        "requested": 26,
+        "charged": 400,
+        "budget": 400
+      },
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "Progress counts completed work, not successful episodes or a validated result."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05_sf-stamp_seal-terraMlp-winner1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terraMlp",
+      "method_label": "Full tools · MLP-only edits",
+      "kind": "comparison",
+      "stage": "running",
+      "progress": {
+        "phase": "Development search",
+        "completed": 9,
+        "requested": 20,
+        "charged": 20,
+        "budget": 400
+      },
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "Progress counts completed work, not successful episodes or a validated result."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "pi05_sf-stamp_seal-terraOutput-winner1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terraOutput",
+      "method_label": "Full tools · output-only edits",
+      "kind": "comparison",
+      "stage": "running",
+      "progress": {
+        "phase": "Development search",
+        "completed": 12,
+        "requested": 20,
+        "charged": 20,
+        "budget": 400
+      },
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "Progress counts completed work, not successful episodes or a validated result."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-handover_block-terra-1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "running",
+      "progress": {
+        "phase": "Development search",
+        "completed": 23,
+        "requested": 40,
+        "charged": 260,
+        "budget": 400
+      },
+      "notes": [
+        "Progress counts completed work, not successful episodes or a validated result."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-move_playingcard_away-terra-1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "move_playingcard_away",
+      "task_label": "Move playing card away",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "running",
+      "progress": {
+        "phase": "Development search",
+        "completed": 37,
+        "requested": 100,
+        "charged": 245,
+        "budget": 400
+      },
+      "notes": [
+        "Progress counts completed work, not successful episodes or a validated result."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-pick_dual_bottles-bb-winner1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "bb",
+      "method_label": "Black-box weight-editing agent",
+      "kind": "comparison",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-pick_dual_bottles-native-validation",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "native",
+      "method_label": "Native-pipeline validation",
+      "kind": "native_check",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Native-pipeline evaluation is pending; no native transfer result is claimed.",
+        "Planned native comparison: 100 unedited and 100 edited episodes; distinct from the 200-layout lab evaluation.",
+        "Native GPU evaluation has not produced a validated outcome.",
+        "The native check must account for an added zero-initialized output bias, not a pretrained bias."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-pick_dual_bottles-py-winner1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "py",
+      "method_label": "Python-only weight-editing agent",
+      "kind": "comparison",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-pick_dual_bottles-qwen-winner1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "qwen",
+      "method_label": "Full tools · Qwen3.8-27B",
+      "kind": "comparison",
+      "stage": "planned",
+      "progress": null,
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+      ],
+      "observed_at": "2026-11-09T04:05:20Z"
+    },
+    {
+      "id": "xiaomi_r0-pick_dual_bottles-terra-cross",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "side_effect",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Cross-task development evaluation of a frozen edit; not an additional held-out repair result.",
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "Target tasks: Handover block, Place can in basket, Stamp seal, Move playing card away, Turn switch. Planned 20 episodes per side per task."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-pick_dual_bottles-terra-winner_r1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-pick_dual_bottles-terra-winner_r2",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "repeat",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "A separately initialized agent attempt is planned; a continuation is not an independent repeat."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-pick_dual_bottles-terraAttn-winner1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terraAttn",
+      "method_label": "Full tools · attention-only edits",
+      "kind": "comparison",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-pick_dual_bottles-terraBias-winner1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terraBias",
+      "method_label": "Full tools · bias-only edits",
+      "kind": "comparison",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-pick_dual_bottles-terraMlp-winner1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terraMlp",
+      "method_label": "Full tools · MLP-only edits",
+      "kind": "comparison",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-pick_dual_bottles-terraOutput-winner1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terraOutput",
+      "method_label": "Full tools · output-only edits",
+      "kind": "comparison",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-place_can_basket-terra-1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "running",
+      "progress": {
+        "phase": "Development search",
+        "completed": 86,
+        "requested": 100,
+        "charged": 140,
+        "budget": 400
+      },
+      "notes": [
+        "Progress counts completed work, not successful episodes or a validated result."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-stamp_seal-terra-1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "running",
+      "progress": {
+        "phase": "Development search",
+        "completed": 13,
+        "requested": 100,
+        "charged": 160,
+        "budget": 400
+      },
+      "notes": [
+        "Progress counts completed work, not successful episodes or a validated result."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xiaomi_r0-turn_switch-terra-1",
+      "policy": "xiaomi_r0",
+      "policy_label": "Xiaomi-Robotics-0",
+      "task": "turn_switch",
+      "task_label": "Turn switch",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "queued",
+      "progress": null,
+      "notes": [],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xvla-click_alarmclock-terra-1",
+      "policy": "xvla",
+      "policy_label": "X-VLA",
+      "task": "click_alarmclock",
+      "task_label": "Click alarm clock",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Search completion is not a validated result; complete paired held-out evaluation remains required.",
+        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xvla-handover_block-terra-1",
+      "policy": "xvla",
+      "policy_label": "X-VLA",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xvla-pick_dual_bottles-terra-1",
+      "policy": "xvla",
+      "policy_label": "X-VLA",
+      "task": "pick_dual_bottles",
+      "task_label": "Pick dual bottles",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Search completion is not a validated result; complete paired held-out evaluation remains required.",
+        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xvla-place_can_basket-terra-1",
+      "policy": "xvla",
+      "policy_label": "X-VLA",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xvla-stamp_seal-terra-1",
+      "policy": "xvla",
+      "policy_label": "X-VLA",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Search completion is not a validated result; complete paired held-out evaluation remains required.",
+        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xvla-turn_switch-terra-1",
+      "policy": "xvla",
+      "policy_label": "X-VLA",
+      "task": "turn_switch",
+      "task_label": "Turn switch",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "queued",
+      "progress": null,
+      "notes": [
+        "Continuation preserves the same scientific run and development budget; not an independent repeat."
+      ],
+      "observed_at": "2026-11-09T05:22:28Z"
+    },
+    {
+      "id": "xwam-handover_block-terra-1",
+      "policy": "xwam",
+      "policy_label": "X-WAM",
+      "task": "handover_block",
+      "task_label": "Handover block",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "xwam-place_can_basket-terra-1",
+      "policy": "xwam",
+      "policy_label": "X-WAM",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "xwam-stamp_seal-terra-1",
+      "policy": "xwam",
+      "policy_label": "X-WAM",
+      "task": "stamp_seal",
+      "task_label": "Stamp seal",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    },
+    {
+      "id": "xwam-turn_switch-terra-1",
+      "policy": "xwam",
+      "policy_label": "X-WAM",
+      "task": "turn_switch",
+      "task_label": "Turn switch",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "kind": "primary",
+      "stage": "status_unverified",
+      "progress": null,
+      "notes": [
+        "Retained plan or reservation; current execution status has not been re-verified."
+      ],
+      "observed_at": "2026-11-08T20:02:30Z"
+    }
+  ],
+  "policies": [
+    {
+      "id": "pi05",
+      "label": "π0.5",
+      "family": "VLA",
+      "tasks": [
+        "click_alarmclock",
+        "click_bell",
+        "handover_block",
+        "hanging_mug",
+        "move_can_pot",
+        "move_pillbottle_pad",
+        "move_playingcard_away",
+        "move_stapler_pad",
+        "open_microwave",
+        "pick_dual_bottles",
+        "place_a2b_left",
+        "place_bread_basket",
+        "place_can_basket",
+        "place_mouse_pad",
+        "place_object_scale",
+        "place_phone_stand",
+        "put_bottles_dustbin",
+        "rotate_qrcode",
+        "stamp_seal",
+        "turn_switch"
+      ],
+      "status": "Accepted task-specific held-out results available; native transfer, repeat and side-effect coverage remain incomplete."
+    },
+    {
+      "id": "pi05_sf",
+      "label": "Spatial Forcing π0.5",
+      "family": "VLA",
+      "tasks": [
+        "handover_block",
+        "place_a2b_right",
+        "place_can_basket",
+        "put_bottles_dustbin",
+        "stamp_seal",
+        "turn_switch"
+      ],
+      "status": "Accepted task-specific held-out results available; native transfer, repeat and side-effect coverage remain incomplete."
+    },
+    {
+      "id": "xvla",
+      "label": "X-VLA",
+      "family": "VLA",
+      "tasks": [
+        "click_alarmclock",
+        "handover_block",
+        "pick_dual_bottles",
+        "place_can_basket",
+        "stamp_seal",
+        "turn_switch"
+      ],
+      "status": "Port implemented; primary task plan retained. Runtime verification is not a validated repair result."
+    },
+    {
+      "id": "xiaomi_r0",
+      "label": "Xiaomi-Robotics-0",
+      "family": "VLA",
+      "tasks": [
+        "handover_block",
+        "move_playingcard_away",
+        "pick_dual_bottles",
+        "place_can_basket",
+        "stamp_seal",
+        "turn_switch"
+      ],
+      "status": "Accepted task-specific held-out results available; native transfer, repeat and side-effect coverage remain incomplete."
+    },
+    {
+      "id": "galaxea",
+      "label": "GalaxeaVLA G0Plus",
+      "family": "VLA",
+      "tasks": [
+        "click_alarmclock",
+        "click_bell",
+        "pick_dual_bottles",
+        "place_can_basket",
+        "stamp_seal",
+        "turn_switch"
+      ],
+      "status": "Port implemented; primary task plan retained. Runtime verification is not a validated repair result."
+    },
+    {
+      "id": "eventvla",
+      "label": "EventVLA",
+      "family": "VLA",
+      "tasks": [
+        "handover_block",
+        "move_playingcard_away",
+        "pick_dual_bottles",
+        "place_can_basket",
+        "stamp_seal",
+        "turn_switch"
+      ],
+      "status": "Port implemented; primary task plan retained. Runtime verification is not a validated repair result."
+    },
+    {
+      "id": "fastwam",
+      "label": "FastWAM",
+      "family": "WAM",
+      "tasks": [
+        "handover_block",
+        "place_can_basket",
+        "stamp_seal",
+        "turn_switch"
+      ],
+      "status": "Port implemented; primary task plan retained. Runtime verification is not a validated repair result."
+    },
+    {
+      "id": "ahawam",
+      "label": "AHA-WAM",
+      "family": "WAM",
+      "tasks": [
+        "handover_block",
+        "pick_dual_bottles",
+        "place_can_basket",
+        "stamp_seal",
+        "turn_switch"
+      ],
+      "status": "Port implemented; CPU compiler check passed, GPU runtime gate pending. No accepted held-out repair result."
+    },
+    {
+      "id": "lingbot_va",
+      "label": "LingBot-VA",
+      "family": "WAM",
+      "tasks": [
+        "turn_switch"
+      ],
+      "status": "Lab runtime checks passed; native gate pending. Four diagnostic task screens remain held; only turn switch is a declared moderate primary task."
+    },
+    {
+      "id": "xwam",
+      "label": "X-WAM",
+      "family": "WAM",
+      "tasks": [
+        "handover_block",
+        "place_can_basket",
+        "stamp_seal",
+        "turn_switch"
+      ],
+      "status": "Stock/lab outcome differences remain under study; compile-off checks do not establish closed-loop equivalence. No accepted repair result."
+    }
+  ],
+  "caveats": [
+    {
+      "id": "preliminary",
+      "title": "Preliminary simulation research",
+      "text": "These are task-specific RoboTwin simulation results, not a universally reliable repair method, physical-robot validation or an accepted paper. Numerical gains are not an unbiased success rate; all accepted regressions are retained."
+    },
+    {
+      "id": "statistics",
+      "title": "Paired, unadjusted statistics",
+      "text": "Each accepted comparison uses 200 held-out layouts, evaluation seeds 1 and 2. Reported p-values are paired Wilcoxon tests; 95% intervals are paired bootstrap gain intervals. Significant gain means positive gain and p < 0.01, without multiple-comparison correction. Missing statistical metadata is null, never inferred from aggregate successes. A single attempt is not an independent replication."
+    },
+    {
+      "id": "selection",
+      "title": "Different cohorts answer different questions",
+      "text": "Original campaign rows, fixed-task tool-suite comparisons, informed transfer and winner-selected exploratory follow-ups must not be pooled as independent discoveries. Fixed Python comparisons cover six declared tasks, including weak outcomes; selection was not preregistered. Winner-selected comparisons are conditional on an earlier held-out win."
+    },
+    {
+      "id": "python",
+      "title": "Python + curated toolkit versus Python alone",
+      "text": "Both variants can write Python, inspect model internals, hooks, recordings and exact replays, perform mechanistic interpretability, and save weight edits. Full tools is a superset: raw Python plus ready-made analyses/editing tools, which the agent may use or ignore. Python-only writes its own analyses without those curated tools. Strong Python-only results support the broader agent-driven weight-editing approach, not the necessity or superiority of the curated toolkit. Different baseline cohorts and incomplete matched controls prevent treating raw cross-run gains as a causal toolkit comparison."
+    },
+    {
+      "id": "budget",
+      "title": "Charged episodes are not attempted episodes",
+      "text": "The development budget is 400 charged episodes. Infrastructure refunds and retained partial diagnostics mean the number of attempted or visible episodes can be larger. Invalid or incomplete cohorts never become accepted held-out scores. Baseline collection and final evaluation are separate from agent development."
+    },
+    {
+      "id": "provenance",
+      "title": "Access and historical provenance limits",
+      "text": "Recently checked results and retained older snapshots have different freshness labels. Historical cohorts lack some explicit policy/checkpoint fields. Source inspection was allowed, and argument-level audits do not certify independent discovery or immutable historical runtime identity. Three Python comparisons have pre-isolation development caveats; their separately isolated held-out counts are unchanged."
+    },
+    {
+      "id": "xiaomi",
+      "title": "An added bias, not a pretrained bias",
+      "text": "Changes one element of a newly introduced zero-initialized output-bias vector, not a pretrained bias parameter. The native baseline has no such bias. Native GPU validation remains pending; CPU equivalence or conversion checks are not native-policy outcomes."
+    },
+    {
+      "id": "native",
+      "title": "Native and cross-task validation are incomplete",
+      "text": "Native Xiaomi and Spatial Forcing comparisons are pending. Spatial Forcing CPU conversion preserved 57 parameter paths/shapes/dtypes and 2,048 changed elements, not a native GPU result. Historical π0.5 native counts await stricter recertification. Forward-policy equivalence does not establish closed-loop equivalence for end-effector action policies."
+    },
+    {
+      "id": "side-effects",
+      "title": "Task repairs can harm other tasks",
+      "text": "A completed five-task development check of a Python bell edit changed successes from 10 to 17 on alarm clock, 6 to 2 on handover, 16 to 13 on bottles, 13 to 1 on can basket and 10 to 4 on stamp (20 episodes per side). Four regressions preclude a global-improvement claim. Legacy cross-task coverage includes 47 complete bound pairs and excludes three incomplete pairs; it is not an additional held-out result table."
+    },
+    {
+      "id": "unresolved",
+      "title": "Failures and unresolved attempts remain visible",
+      "text": "The three accepted full-agent regressions are retained. Original π0.5 full-agent attempts on hang mug, place A to B (left) and move stapler to pad submitted no edit. The original Qwen bottles attempt was protocol-invalid, not a completed result or automatically resumable study. Incomplete evaluations and runtime smoke passes are excluded from the accepted table."
+    },
+    {
+      "id": "roadmap",
+      "title": "A conditional roadmap, not future outcomes",
+      "text": "The fixed primary task matrix is enumerated below. For every ported policy, the plan adds bias/output/MLP/attention, black-box and Python comparisons on observed winning tasks, Qwen on a subset, one or two independent repeats, and cross-task side-effect checks. Tasks not yet demonstrated as winners are not assigned invented follow-up outcomes. LingBot requires four diagnostic screens before choosing more moderate primary tasks."
+    },
+    {
+      "id": "optional-control",
+      "title": "Optional training control is separate",
+      "text": "A matched-episode LoRA or fine-tuning control on one or two tasks and further shoulder-under-reach diagnosis are optional planned extensions; task selection is not yet specified. Gradient-based fitting/training/LoRA remain forbidden inside the weight-editing agent. Diagnostic gradients and closed-form least-squares/ridge fits from forward-pass data are allowed."
+    },
+    {
+      "id": "snapshot",
+      "title": "Published snapshot, not a live monitor",
+      "text": "Statuses are timestamped observations. Retained reservations are status-unverified, not live queued. Progress counts describe search or evaluation work, never successes. Continuations preserve the same run identity and are not counted as independent experiments. Refreshing this site requires a new sanitized export."
+    }
+  ],
+  "method": {
+    "description": "An agent diagnoses a policy's development failures and submits targeted saved weight edits, without gradient-based training. Freeze the edit before evaluating paired held-out layouts inaccessible to the agent. Source inspection is permitted; independent discovery is not assumed.",
+    "development_budget": 400,
+    "heldout_layouts": 200,
+    "stages": [
+      {
+        "title": "Observe failures",
+        "body": "Inspect baseline development rollouts and failure patterns on fixed development layouts."
+      },
+      {
+        "title": "Probe the policy",
+        "body": "Inspect activations and actions, test causal interventions and construct an explanation. Interventions are diagnostic, not the deliverable."
+      },
+      {
+        "title": "Edit weights",
+        "body": "Save targeted parameter edits, including hand-designed changes or permitted closed-form fits from forward-pass data."
+      },
+      {
+        "title": "Test within budget",
+        "body": "Use rollout feedback within 400 charged development episodes. Refunds and incomplete attempts are disclosed separately."
+      },
+      {
+        "title": "Freeze and evaluate",
+        "body": "Freeze the checkpoint; compare base and edited policies on 200 paired held-out layouts, inaccessible to the agent."
+      },
+      {
+        "title": "Check generalization",
+        "body": "Measure cross-task harms, independent repeats and native-pipeline transfer. These checks remain incomplete."
+      }
+    ],
+    "toolsets": [
+      {
+        "id": "full",
+        "label": "Python + curated toolkit",
+        "description": "Full raw Python access to the model, hooks, recordings, replay and custom saved weight edits, PLUS curated interpretability, causal probes and editing tools. A superset of Python-only; the agent can write its own analyses or ignore packaged tools."
+      },
+      {
+        "id": "blackbox",
+        "label": "Black-box",
+        "description": "Behavioral feedback, action-bias weight editing and rollouts; still delivers an edited checkpoint."
+      },
+      {
+        "id": "python",
+        "label": "Python alone · raw access",
+        "description": "Full interpretability capability through raw model, hooks, recordings and exact replay in Python, plus lab.save_edit and rollouts. Write your own analyses instead of using ready-made curated tools. A toolkit ablation within agent-driven weight editing, not a non-interpretability or non-weight baseline."
+      }
+    ]
+  },
+  "links": []
+}

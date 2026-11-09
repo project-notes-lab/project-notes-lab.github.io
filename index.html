@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An ongoing research project exploring whether automated diagnosis and targeted weight edits can improve robot policies. Method, complete held-out results, and experiment status.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Weight-Space Programming for Robotics</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#main" aria-label="Weight-space programming home"><span class="brand-symbol" aria-hidden="true">w↗</span> WEIGHT-SPACE <span class="wordmark-light">/ ROBOTICS</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#method">Method</a><a href="#results">Results</a><a href="#experiments">Experiments</a><a href="#limitations">Limitations</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" aria-labelledby="project-title">
+      <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> <span id="project-status">Ongoing research · preliminary simulation results</span></div>
+      <div class="hero-grid">
+        <div>
+          <h1 id="project-title">Weight-Space<br>Programming<br><span>for Robotics.</span></h1>
+          <p class="hero-question">Can an agent understand a robot’s failure well enough to fix it <em>in the weights?</em></p>
+          <p class="hero-description" id="project-subtitle">We study automated diagnosis and targeted edits to robot policies, with budgeted development rollouts and a separate held-out evaluation.</p>
+          <div class="hero-actions"><a class="button primary" href="#method">Explore the method <span aria-hidden="true">↗</span></a><a class="text-link" href="#results">Inspect all results <span aria-hidden="true">↓</span></a></div>
+        </div>
+        <aside class="research-note" aria-labelledby="question-title">
+          <div class="note-kicker">THE RESEARCH QUESTION</div>
+          <h2 id="question-title">Diagnose.<br>Edit.<br>Evaluate.</h2>
+          <div class="weight-sketch" aria-hidden="true"><span>π<sub>θ</sub></span><span class="edit-arrow">→<small>targeted edit</small></span><span>π<sub>θ + Δθ</sub></span></div>
+          <p>The deliverable is a saved weight edit, not an action wrapper. Interpretability tools help form hypotheses; simulator rollouts test whether those hypotheses improve behavior.</p>
+          <div class="note-footer">A research record, not a reliability claim.</div>
+        </aside>
+      </div>
+      <div class="snapshot-strip"><span><span class="status-dot muted" aria-hidden="true"></span> Published snapshot · not a live feed</span><span>Evidence as of <time id="hero-timestamp">loading…</time></span></div>
+    </section>
+
+    <div id="data-notice" class="notice section-shell" role="status">Loading the published research snapshot…</div>
+    <noscript><div class="notice section-shell">JavaScript is needed for the results and experiment filters. The method remains readable, and the complete sanitized data is available as <a href="./data.json">JSON</a> or <a href="./results.csv">CSV</a>.</div></noscript>
+
+    <section id="method" class="section-shell section-block" aria-labelledby="method-heading">
+      <div class="section-heading"><div><p class="eyebrow">THE METHOD</p><h2 id="method-heading">A small edit.<br>A separate test.</h2></div><p id="method-description" class="section-intro">Observe a failure, investigate its mechanism, and modify the policy. Development feedback guides the edit; inaccessible held-out layouts test the frozen result.</p></div>
+      <figure class="method-figure" tabindex="0" aria-label="Method diagram; scroll horizontally on smaller screens">
+        <div class="figure-topline"><span>DEVELOPMENT · AGENT ACCESS</span><span class="boundary-label">EVALUATION · NO AGENT ACCESS</span></div>
+        <svg class="method-diagram" viewBox="0 0 1120 300" role="img" aria-labelledby="diagram-title diagram-description">
+          <title id="diagram-title">Development loop and held-out evaluation boundary</title>
+          <desc id="diagram-description">Observe failed development rollouts, inspect and causally probe the model, and propose a targeted saved weight edit. Budgeted rollout feedback returns to diagnosis. Freeze the checkpoint before crossing the held-out boundary. Compare baseline and edited policies on paired held-out layouts inaccessible to the agent, then pursue side-effect and native validation.</desc>
+          <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#67786d"/></marker></defs>
+          <rect x="8" y="28" width="670" height="235" rx="12" fill="#edf1e9"/>
+          <rect x="752" y="28" width="360" height="235" rx="12" fill="#f0eee8"/>
+          <g fill="#ffffff" stroke="#b8c5b7"><rect x="28" y="77" width="184" height="100" rx="6"/><rect x="244" y="77" width="184" height="100" rx="6"/><rect x="460" y="77" width="184" height="100" rx="6"/></g>
+          <g fill="#203c31" font-family="system-ui, sans-serif" text-anchor="middle"><text x="120" y="112" font-size="18" font-weight="650">Observe failure</text><text x="120" y="140" font-size="13">Development rollouts</text><text x="336" y="112" font-size="18" font-weight="650">Diagnose</text><text x="336" y="140" font-size="13">Inspect + causally probe</text><text x="552" y="112" font-size="18" font-weight="650">Edit weights</text><text x="552" y="140" font-size="13">Save a targeted change</text></g>
+          <g fill="none" stroke="#67786d" stroke-width="2" marker-end="url(#arrow)"><path d="M212 127 H240"/><path d="M428 127 H456"/><path d="M552 178 V215 H120 V182"/><path d="M644 127 H788"/></g>
+          <text x="336" y="244" text-anchor="middle" fill="#476250" font-size="13" font-family="system-ui, sans-serif">Budgeted rollout feedback → revise the hypothesis</text>
+          <path d="M714 10 V278" stroke="#a66b43" stroke-width="2" stroke-dasharray="6 5"/>
+          <rect x="683" y="88" width="62" height="24" rx="4" fill="#f7f6f2"/><text x="714" y="105" text-anchor="middle" fill="#874a29" font-size="12" font-family="system-ui, sans-serif">FREEZE</text>
+          <rect x="792" y="77" width="282" height="100" rx="6" fill="#ffffff" stroke="#c8bcae"/>
+          <g fill="#493e32" text-anchor="middle" font-family="system-ui, sans-serif"><text x="933" y="112" font-size="18" font-weight="650">Paired held-out evaluation</text><text x="933" y="140" font-size="13">Baseline vs. frozen edited policy</text><text x="933" y="221" font-size="13">Then: side effects + native validation</text><text x="933" y="244" font-size="12">Coverage is incomplete; see limitations.</text></g>
+        </svg>
+        <figcaption>The agent iterates only on development feedback. The held-out comparison evaluates the frozen edit, not the agent’s best development score. Scroll the diagram horizontally on smaller screens.</figcaption>
+      </figure>
+      <div class="protocol-strip"><div><span id="development-budget" class="protocol-value">—</span><span>charged development episodes</span></div><div><span id="heldout-layouts" class="protocol-value">—</span><span>held-out layouts</span></div><p>Infrastructure refunds mean the charged budget is not an exact count of attempted episodes. Source inspection is permitted; these experiments do not certify independent discovery.</p></div>
+      <div class="method-detail-grid">
+        <div><h3>What counts as an edit?</h3><p>Hand-written changes and closed-form fits from forward-pass data are allowed. Gradient-based fitting, fine-tuning, and LoRA are not. Gradients may be used for diagnosis, not to optimize the edit.</p><p>Diagnostic interventions are not the final policy: the submitted change must be saved in the weights.</p></div>
+        <div><h3>What does the comparison ask?</h3><p><strong>Python + curated toolkit</strong> versus <strong>Python alone</strong>: both agents can inspect model internals, use hooks and replay, write their own mechanistic analyses, and save weight edits. The full-tool agent is a superset: it can use the packaged tools, write custom Python, or combine both.</p><p>Python-only removes ready-made analyses, not interpretability. Black-box agents also deliver weight edits, using behavioral feedback and action-bias editing. <strong>This is a tool-suite ablation, not a no-weight-edit baseline.</strong></p><p>Strong Python-only results support the broader weight-editing approach, not the necessity or superiority of the curated toolkit. Different counts, controls, and selected cohorts prevent a simple causal ranking.</p></div>
+      </div>
+      <div id="toolsets" class="toolset-grid" aria-label="Agent toolsets"></div>
+      <details class="protocol-details"><summary>Read the protocol stages</summary><ol id="method-stages"><li>Protocol details load with the published snapshot.</li></ol></details>
+    </section>
+
+    <section id="results" class="section-block results-section" aria-labelledby="results-heading">
+      <div class="section-shell">
+        <div class="section-heading"><div><p class="eyebrow">THE EVIDENCE</p><h2 id="results-heading">The complete result,<br>not just the wins.</h2></div><p class="section-intro">Every published completed held-out comparison appears below, including regressions and weak gains. These selected experiments are not an unbiased estimate of the method’s success rate.</p></div>
+        <div id="result-metrics" class="metrics-grid" aria-label="Published result summary"></div>
+        <div class="result-guide"><strong>Read the evidence in context.</strong> Baseline and edited values are successes over evaluated episodes per side. Δ is the difference in percentage points, not relative improvement. Numerical gains and statistical evidence are separate. Unknown statistics stay unknown; selection and provenance are attached to each row.</div>
+        <form id="result-filters" class="filter-panel" aria-label="Filter and sort results">
+          <div class="filters-grid">
+            <label>Policy<select id="result-policy" name="policy"><option value="">All policies</option></select></label>
+            <label>Toolset / method<select id="result-method" name="method"><option value="">All methods</option></select></label>
+            <label>Cohort<select id="result-cohort" name="cohort"><option value="">All cohorts</option></select></label>
+            <label>Outcome<select id="result-outcome" name="outcome"><option value="">All outcomes</option><option value="gain">Numerical gain</option><option value="regression">Regression</option><option value="tie">Tie</option><option value="significant_gain">Statistically significant gain</option><option value="not_significant">Not statistically significant</option><option value="not_available">Statistics unavailable</option></select></label>
+            <label class="search-field">Search tasks and notes<input id="result-search" name="search" type="search" placeholder="e.g. bottles, transfer…" autocomplete="off"></label>
+            <label>Sort by<select id="result-sort" name="sort"><option value="policy">Policy · task · method</option><option value="delta-desc">Largest gain first</option><option value="delta-asc">Regressions first</option><option value="p-value">Smallest p-value first</option><option value="latest">Latest observation first</option></select></label>
+          </div>
+          <div class="filter-footer"><p id="result-count" role="status" aria-live="polite">Results are loading.</p><button class="reset-button" type="reset">Reset filters</button></div>
+        </form>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Held-out results table; scroll horizontally for all columns">
+          <table class="results-table"><caption>Completed paired held-out comparisons. Open “Details” for confidence intervals, provenance, timestamps, and caveats.</caption><thead><tr><th scope="col">Policy / task</th><th scope="col">Method / cohort</th><th scope="col" class="numeric">Baseline</th><th scope="col" class="numeric">Edited</th><th scope="col" class="numeric">Δ pp</th><th scope="col">Statistical evidence</th><th scope="col">Context</th></tr></thead><tbody id="result-rows"></tbody></table>
+        </div>
+        <p id="result-empty" class="empty-state" hidden>No results match these filters. Try a broader search or reset the filters.</p>
+        <div class="downloads"><p>Inspect the snapshot yourself. Downloads contain sanitized public research data only.</p><div><a class="button secondary" href="./results.csv" download>Download results CSV <span aria-hidden="true">↓</span></a><a class="button secondary" href="./data.json" download>Download snapshot JSON <span aria-hidden="true">↓</span></a></div></div>
+      </div>
+    </section>
+
+    <section id="experiments" class="section-shell section-block" aria-labelledby="experiments-heading">
+      <div class="section-heading"><div><p class="eyebrow">WORK IN PROGRESS</p><h2 id="experiments-heading">What comes next.</h2></div><p class="section-intro">A timestamped research plan and status snapshot—not a live job monitor. Progress describes work performed, never policy success. Queued, held, planned, and unverified work remain distinct.</p></div>
+      <div class="experiment-heading"><p>Evidence as of <time id="experiment-timestamp">loading…</time></p><div id="experiment-summary" class="status-summary"></div></div>
+      <form id="experiment-filters" class="filter-panel" aria-label="Filter experiments"><div class="filters-grid experiment-filters-grid">
+        <label>Status<select id="experiment-stage" name="stage"><option value="">All statuses</option></select></label>
+        <label>Experiment type<select id="experiment-kind" name="kind"><option value="">All types</option></select></label>
+        <label>Policy<select id="experiment-policy" name="policy"><option value="">All policies</option></select></label>
+        <label>Search experiments<input id="experiment-search" name="search" type="search" placeholder="Task, method, or note…" autocomplete="off"></label>
+      </div><div class="filter-footer"><p id="experiment-count" role="status" aria-live="polite">Experiments are loading.</p><button class="reset-button" type="reset">Reset filters</button></div></form>
+      <div id="experiment-cards" class="experiment-grid"></div>
+      <p id="experiment-empty" class="empty-state" hidden>No experiments match these filters. Try a broader search or reset the filters.</p>
+    </section>
+
+    <section id="policies" class="section-block inventory-section" aria-labelledby="policies-heading"><div class="section-shell"><div class="section-heading"><div><p class="eyebrow">RESEARCH COVERAGE</p><h2 id="policies-heading">Different policies.<br>Different open questions.</h2></div><p class="section-intro">The inventory distinguishes vision-language-action (VLA) and world-action (WAM) policies. Inclusion does not imply complete validation or demonstrated improvement.</p></div><div id="policy-cards" class="policy-grid"></div></div></section>
+
+    <section id="limitations" class="section-shell section-block" aria-labelledby="limitations-heading"><div class="section-heading"><div><p class="eyebrow">SCOPE & LIMITATIONS</p><h2 id="limitations-heading">Promising is not proven.</h2></div><p class="section-intro">These are preliminary simulation experiments. Selection effects, incomplete validation, and uneven metadata limit what can be concluded. The qualifications below are part of the result.</p></div><div id="caveats" class="caveat-grid"></div><div id="reference-links" class="reference-links" hidden><h3>Public references</h3><ul id="reference-list"></ul></div></section>
+  </main>
+
+  <footer class="site-footer section-shell"><div><a class="wordmark" href="#main"><span class="brand-symbol" aria-hidden="true">w↗</span> WEIGHT-SPACE / ROBOTICS</a><p>Ongoing research. Open evidence. Explicit limitations.</p></div><div class="footer-meta"><p>Snapshot generated <time id="generated-timestamp">loading…</time></p><p>No analytics. No live infrastructure connection.</p><a href="./data.json">Public dataset</a> <span aria-hidden="true">·</span> <a href="#main">Back to top ↑</a></div></footer>
+</body>
+</html>
