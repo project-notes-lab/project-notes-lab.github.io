@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T05:22:28Z",
-  "evidence_as_of": "2026-11-09T05:22:28Z",
+  "generated_at": "2026-11-09T06:43:32Z",
+  "evidence_as_of": "2026-11-09T06:43:32Z",
   "project": {
     "title": "Weight-Space Programming for Robotics",
     "subtitle": "Can an agent diagnose and repair robot policies through targeted weight edits?",
     "status": "Ongoing preliminary simulation research"
   },
   "summary": {
-    "validated_runs": 32,
-    "numerical_gains": 29,
+    "validated_runs": 33,
+    "numerical_gains": 30,
     "regressions": 3,
     "ties": 0,
-    "significance_known_runs": 32,
+    "significance_known_runs": 33,
     "significant_gains": 21,
     "active_experiments": 10,
-    "queued_experiments": 33,
+    "queued_experiments": 32,
     "planned_experiments": 2
   },
   "results": [
@@ -72,7 +72,7 @@
         "Development baseline/search include pre-isolation execution. Separately isolated held-out cohorts remain accepted; this does not demonstrate corrupted outcomes.",
         "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
       ],
-      "observed_at": "2026-11-09T04:05:20Z",
+      "observed_at": "2026-11-09T06:43:32Z",
       "source_freshness": "recently_verified"
     },
     {
@@ -183,7 +183,7 @@
         "Development baseline/search include pre-isolation execution. Separately isolated held-out cohorts remain accepted; this does not demonstrate corrupted outcomes.",
         "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
       ],
-      "observed_at": "2026-11-09T04:05:20Z",
+      "observed_at": "2026-11-09T06:43:32Z",
       "source_freshness": "recently_verified"
     },
     {
@@ -484,7 +484,7 @@
         "Development baseline/search include pre-isolation execution. Separately isolated held-out cohorts remain accepted; this does not demonstrate corrupted outcomes.",
         "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
       ],
-      "observed_at": "2026-11-09T04:05:20Z",
+      "observed_at": "2026-11-09T06:43:32Z",
       "source_freshness": "recently_verified"
     },
     {
@@ -568,7 +568,7 @@
         "Operator-side harness/adapter files changed during development; whether already-running processes reloaded them is unverified.",
         "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
       ],
-      "observed_at": "2026-11-09T04:05:20Z",
+      "observed_at": "2026-11-09T06:19:37Z",
       "source_freshness": "recently_verified"
     },
     {
@@ -705,7 +705,7 @@
         "Operator-side harness/adapter files changed during development; whether already-running processes reloaded them is unverified.",
         "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
       ],
-      "observed_at": "2026-11-09T04:05:20Z",
+      "observed_at": "2026-11-09T06:19:37Z",
       "source_freshness": "recently_verified"
     },
     {
@@ -786,7 +786,7 @@
       "notes": [
         "Native-pipeline evaluation is pending; no native transfer result is claimed."
       ],
-      "observed_at": "2026-11-09T04:05:20Z",
+      "observed_at": "2026-11-09T06:43:32Z",
       "source_freshness": "recently_verified"
     },
     {
@@ -813,7 +813,34 @@
       "notes": [
         "Native-pipeline evaluation is pending; no native transfer result is claimed."
       ],
-      "observed_at": "2026-11-09T04:05:20Z",
+      "observed_at": "2026-11-09T06:43:32Z",
+      "source_freshness": "recently_verified"
+    },
+    {
+      "id": "pi05_sf-place_can_basket-terra-1",
+      "policy": "pi05_sf",
+      "policy_label": "Spatial Forcing π0.5",
+      "task": "place_can_basket",
+      "task_label": "Place can in basket",
+      "method": "terra",
+      "method_label": "Full tools · frontier agent",
+      "cohort": "original",
+      "cohort_label": "Original campaign",
+      "baseline_successes": 130,
+      "edited_successes": 135,
+      "episodes_per_side": 200,
+      "delta_pp": 2.5,
+      "p_value": 0.5413007280472231,
+      "ci95_pp": [
+        -5.5,
+        10.5
+      ],
+      "numerical_outcome": "gain",
+      "statistical_outcome": "not_significant",
+      "notes": [
+        "Native-pipeline evaluation is pending; no native transfer result is claimed."
+      ],
+      "observed_at": "2026-11-09T06:43:32Z",
       "source_freshness": "recently_verified"
     },
     {
@@ -840,7 +867,7 @@
       "notes": [
         "Native-pipeline evaluation is pending; no native transfer result is claimed."
       ],
-      "observed_at": "2026-11-09T04:05:20Z",
+      "observed_at": "2026-11-09T06:43:32Z",
       "source_freshness": "recently_verified"
     },
     {
@@ -867,7 +894,7 @@
       "notes": [
         "Native-pipeline evaluation is pending; no native transfer result is claimed."
       ],
-      "observed_at": "2026-11-09T04:05:20Z",
+      "observed_at": "2026-11-09T06:43:32Z",
       "source_freshness": "recently_verified"
     },
     {
@@ -892,11 +919,11 @@
       "numerical_outcome": "gain",
       "statistical_outcome": "significant_gain",
       "notes": [
-        "Changes one element of a newly introduced zero-initialized output-bias vector, not a pretrained bias parameter.",
+        "Edits a newly introduced zero-initialized output-bias vector, not a pretrained bias parameter.",
         "Native-pipeline evaluation is pending; no native transfer result is claimed.",
         "Source inspection was permitted; independent discovery is not certified by the argument-level audit."
       ],
-      "observed_at": "2026-11-09T04:05:20Z",
+      "observed_at": "2026-11-09T06:43:32Z",
       "source_freshness": "recently_verified"
     }
   ],
@@ -2375,29 +2402,6 @@
       "observed_at": "2026-11-08T20:02:30Z"
     },
     {
-      "id": "pi05_sf-place_can_basket-terra-1",
-      "policy": "pi05_sf",
-      "policy_label": "Spatial Forcing π0.5",
-      "task": "place_can_basket",
-      "task_label": "Place can in basket",
-      "method": "terra",
-      "method_label": "Full tools · frontier agent",
-      "kind": "primary",
-      "stage": "running",
-      "progress": {
-        "phase": "Held-out evaluation",
-        "completed": 22,
-        "requested": 100,
-        "charged": 390,
-        "budget": 400
-      },
-      "notes": [
-        "Search completion is not a validated result; complete paired held-out evaluation remains required.",
-        "Progress counts completed work, not successful episodes or a validated result."
-      ],
-      "observed_at": "2026-11-09T05:22:28Z"
-    },
-    {
       "id": "pi05_sf-put_bottles_dustbin-terra-1",
       "policy": "pi05_sf",
       "policy_label": "Spatial Forcing π0.5",
@@ -2425,16 +2429,16 @@
       "stage": "running",
       "progress": {
         "phase": "Development search",
-        "completed": 20,
+        "completed": 10,
         "requested": 20,
-        "charged": 20,
+        "charged": 160,
         "budget": 400
       },
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
         "Progress counts completed work, not successful episodes or a validated result."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T06:41:58Z"
     },
     {
       "id": "pi05_sf-stamp_seal-native-validation",
@@ -2464,12 +2468,19 @@
       "method": "py",
       "method_label": "Python-only weight-editing agent",
       "kind": "comparison",
-      "stage": "queued",
-      "progress": null,
+      "stage": "running",
+      "progress": {
+        "phase": "Development search",
+        "completed": 3,
+        "requested": 40,
+        "charged": 40,
+        "budget": 400
+      },
       "notes": [
-        "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
+        "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
+        "Progress counts completed work, not successful episodes or a validated result."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T06:41:58Z"
     },
     {
       "id": "pi05_sf-stamp_seal-qwen-winner1",
@@ -2485,7 +2496,7 @@
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
       ],
-      "observed_at": "2026-11-09T04:05:20Z"
+      "observed_at": "2026-11-09T06:43:32Z"
     },
     {
       "id": "pi05_sf-stamp_seal-terra-cross",
@@ -2551,16 +2562,16 @@
       "stage": "running",
       "progress": {
         "phase": "Development search",
-        "completed": 4,
-        "requested": 24,
-        "charged": 24,
+        "completed": 100,
+        "requested": 100,
+        "charged": 124,
         "budget": 400
       },
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
         "Progress counts completed work, not successful episodes or a validated result."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T06:41:58Z"
     },
     {
       "id": "pi05_sf-stamp_seal-terraBias-winner1",
@@ -2573,17 +2584,18 @@
       "kind": "comparison",
       "stage": "running",
       "progress": {
-        "phase": "Development search",
-        "completed": 25,
-        "requested": 26,
+        "phase": "Held-out evaluation",
+        "completed": 67,
+        "requested": 100,
         "charged": 400,
         "budget": 400
       },
       "notes": [
+        "Search completion is not a validated result; complete paired held-out evaluation remains required.",
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
         "Progress counts completed work, not successful episodes or a validated result."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T06:41:58Z"
     },
     {
       "id": "pi05_sf-stamp_seal-terraMlp-winner1",
@@ -2597,16 +2609,16 @@
       "stage": "running",
       "progress": {
         "phase": "Development search",
-        "completed": 9,
-        "requested": 20,
-        "charged": 20,
+        "completed": 77,
+        "requested": 100,
+        "charged": 152,
         "budget": 400
       },
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
         "Progress counts completed work, not successful episodes or a validated result."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T06:41:58Z"
     },
     {
       "id": "pi05_sf-stamp_seal-terraOutput-winner1",
@@ -2620,16 +2632,16 @@
       "stage": "running",
       "progress": {
         "phase": "Development search",
-        "completed": 12,
-        "requested": 20,
-        "charged": 20,
+        "completed": 7,
+        "requested": 100,
+        "charged": 210,
         "budget": 400
       },
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison.",
         "Progress counts completed work, not successful episodes or a validated result."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T06:41:58Z"
     },
     {
       "id": "xiaomi_r0-handover_block-terra-1",
@@ -2643,15 +2655,15 @@
       "stage": "running",
       "progress": {
         "phase": "Development search",
-        "completed": 23,
-        "requested": 40,
-        "charged": 260,
+        "completed": 58,
+        "requested": 100,
+        "charged": 400,
         "budget": 400
       },
       "notes": [
         "Progress counts completed work, not successful episodes or a validated result."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T06:41:58Z"
     },
     {
       "id": "xiaomi_r0-move_playingcard_away-terra-1",
@@ -2664,16 +2676,17 @@
       "kind": "primary",
       "stage": "running",
       "progress": {
-        "phase": "Development search",
-        "completed": 37,
+        "phase": "Held-out evaluation",
+        "completed": 53,
         "requested": 100,
-        "charged": 245,
+        "charged": 400,
         "budget": 400
       },
       "notes": [
+        "Search completion is not a validated result; complete paired held-out evaluation remains required.",
         "Progress counts completed work, not successful episodes or a validated result."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T06:41:58Z"
     },
     {
       "id": "xiaomi_r0-pick_dual_bottles-bb-winner1",
@@ -2740,7 +2753,7 @@
       "notes": [
         "Selected after a primary held-out win; exploratory, not an unbiased main comparison."
       ],
-      "observed_at": "2026-11-09T04:05:20Z"
+      "observed_at": "2026-11-09T06:43:32Z"
     },
     {
       "id": "xiaomi_r0-pick_dual_bottles-terra-cross",
@@ -2870,15 +2883,15 @@
       "stage": "running",
       "progress": {
         "phase": "Development search",
-        "completed": 86,
+        "completed": 78,
         "requested": 100,
-        "charged": 140,
+        "charged": 240,
         "budget": 400
       },
       "notes": [
         "Progress counts completed work, not successful episodes or a validated result."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T06:41:58Z"
     },
     {
       "id": "xiaomi_r0-stamp_seal-terra-1",
@@ -2892,15 +2905,15 @@
       "stage": "running",
       "progress": {
         "phase": "Development search",
-        "completed": 13,
+        "completed": 100,
         "requested": 100,
-        "charged": 160,
+        "charged": 260,
         "budget": 400
       },
       "notes": [
         "Progress counts completed work, not successful episodes or a validated result."
       ],
-      "observed_at": "2026-11-09T05:22:28Z"
+      "observed_at": "2026-11-09T06:41:58Z"
     },
     {
       "id": "xiaomi_r0-turn_switch-terra-1",
@@ -3260,7 +3273,7 @@
     {
       "id": "xiaomi",
       "title": "An added bias, not a pretrained bias",
-      "text": "Changes one element of a newly introduced zero-initialized output-bias vector, not a pretrained bias parameter. The native baseline has no such bias. Native GPU validation remains pending; CPU equivalence or conversion checks are not native-policy outcomes."
+      "text": "Edits a newly introduced zero-initialized output-bias vector, not a pretrained bias parameter. The native baseline has no such bias. Native GPU validation remains pending; CPU equivalence or conversion checks are not native-policy outcomes."
     },
     {
       "id": "native",
