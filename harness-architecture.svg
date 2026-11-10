@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="840" viewBox="0 0 1000 840" role="img" aria-labelledby="harness-title harness-description">
+  <title id="harness-title">Policy repair harness: explicit adapters, development evidence, and independent held-out evaluation</title>
+  <desc id="harness-description">A pretrained VLA, WAM, or other learned policy and a simulator/task enter through explicit policy and benchmark adapters. The policy adapter declares streams, hooks, action semantics, capabilities, and edit scopes; the benchmark supplies layouts, rollouts, recordings, and outcomes. Adapter implementation and preflight are required; unsupported tools are omitted. During budgeted development, an LLM in Codex CLI exchanges MCP tool calls and evidence with a laboratory. The FULL condition provides both arbitrary Python using Lab, NumPy, and PyTorch and curated tools for matched controls, activation analysis, causal interventions, attribution, and saved-edit recipes. The laboratory and simulation policy worker load separate model instances. Saved tensor edits bridge them, and recorded observations, actions, model inputs, noise, hooks, and outcomes return as evidence. The agent journals falsifiable hypotheses, parent relationships, immutable candidate snapshots, and full-cohort validation repeats. Diagnostic screens and activation interventions are not final submissions. Selection retains the best eligible development improvement, or the base policy. The default controller remains sequential flush-only. Optional fork-flush starts four isolated fresh workspaces in sequential waves, selects the best validated lineage, and resumes the winner's same conversation for exploitation, repeating at aggregate 33 and 66 percent development-episode boundaries; losing branches count toward the budget. Joint eight-direction portfolios and balanced six-of-ten robot-metric views reuse RSI components, not its full treatment. There is no semantic deduplication, execute-all portfolio, or stall monitor. Fork-and-Flush helpers are an independent MIT implementation plus the paper algorithm, not author code. The prototype submits weight edits, not gradient-based fitting or LoRA; diagnostic gradients and closed-form fits are allowed. Merging and retrieval are future work. After selection, weights are frozen and an independent evaluator compares base and edited policies on paired held-out layouts, with no held-out feedback to the agent. Native-pipeline and side-effect checks are additional validation, not universal guarantees. Solid arrows indicate data or artifacts; dashed arrows indicate control. This is a harness diagram, not evidence of new scientific results.</desc>
+  <defs>
+    <style>
+      :root { --fg: #252f28; --muted: #62695f; --border: #d8dcd2; --surface: #fffefa; --accent: #254e3c; --warning: #a64625; }
+      svg { color: var(--accent); font-family: "Segoe UI", Arial, sans-serif; font-size: 14px; }
+      text { fill: var(--fg); }
+      .heading { font-size: 17px; font-weight: 650; }
+      .section { fill: var(--accent); font-size: 14px; font-weight: 650; letter-spacing: .65px; }
+      .muted { fill: var(--muted); }
+      .node { fill: var(--surface); stroke: var(--border); stroke-width: 1.4; }
+      .lab { stroke: var(--accent); }
+      .controller { fill: none; stroke: var(--border); stroke-width: 1.4; stroke-dasharray: 5 4; }
+      .divider { stroke: var(--border); stroke-width: 1; }
+      .flow { fill: none; stroke: currentColor; stroke-width: 1.65; marker-end: url(#arrow); }
+      .control { stroke-dasharray: 5 4; }
+      .boundary { fill: none; stroke: var(--warning); stroke-width: 1.5; stroke-dasharray: 7 5; }
+      .boundary-label { fill: var(--warning); font-size: 14px; font-weight: 650; letter-spacing: .5px; }
+    </style>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L8 4 L0 8 Z" fill="currentColor"/>
+    </marker>
+  </defs>
+
+  <text class="section" x="24" y="25">01 / EXPLICIT INTEGRATION</text>
+  <path class="flow" d="M545 20 H585"/>
+  <text class="muted" x="596" y="25">Data / artifacts</text>
+  <path class="flow control" d="M799 20 H839"/>
+  <text class="muted" x="850" y="25">Control</text>
+
+  <rect class="node" x="24" y="45" width="460" height="130" rx="6"/>
+  <text class="heading" x="44" y="73">Pretrained policy · VLA / WAM / other</text>
+  <text x="44" y="101">Policy adapter → laboratory + simulation worker</text>
+  <text class="muted" x="44" y="128">Streams · hooks · action semantics</text>
+  <text class="muted" x="44" y="151">Capabilities · editable parameter scopes</text>
+
+  <rect class="node" x="516" y="45" width="460" height="130" rx="6"/>
+  <text class="heading" x="536" y="73">Simulator + task</text>
+  <text x="536" y="101">Benchmark adapter → rollout / evaluation</text>
+  <text class="muted" x="536" y="128">Layouts · rollouts · recordings · outcomes</text>
+  <text class="muted" x="536" y="151">Task execution and scoring stay benchmark-specific</text>
+  <text class="muted" x="500" y="197" text-anchor="middle">Explicit adapters + preflight required · unsupported tools omitted · not universal zero-code compatibility</text>
+
+  <text class="section" x="24" y="224">02 / BUDGETED DEVELOPMENT</text>
+  <rect class="node" x="24" y="252" width="260" height="98" rx="6"/>
+  <text class="heading" x="44" y="281">LLM in Codex CLI</text>
+  <text x="44" y="307">Hypothesize → inspect → revise</text>
+  <text class="muted" x="44" y="331">Reasoning + context management</text>
+
+  <rect class="node lab" x="360" y="238" width="616" height="155" rx="6"/>
+  <text class="heading" x="380" y="266">MCP laboratory · FULL has both paths</text>
+  <line class="divider" x1="662" y1="282" x2="662" y2="372"/>
+  <text class="heading" x="380" y="305">Arbitrary Python</text>
+  <text x="380" y="331">Lab + NumPy / PyTorch</text>
+  <text class="muted" x="380" y="354">Inspect, replay, analyze, edit weights</text>
+  <text class="heading" x="683" y="305">Curated interpretability</text>
+  <text x="683" y="331">Matched controls · activations · causal</text>
+  <text class="muted" x="683" y="354">Attribution · saved-edit recipes</text>
+  <path class="flow control" d="M284 278 H360"/>
+  <path class="flow" d="M360 320 H284"/>
+  <text class="muted" x="322" y="305" text-anchor="middle">MCP</text>
+
+  <path class="flow control" d="M154 350 V413"/>
+  <text class="muted" x="171" y="386">Journal + compare</text>
+  <rect class="node" x="24" y="413" width="260" height="151" rx="6"/>
+  <text class="heading" x="44" y="442">Evidence journal</text>
+  <text x="44" y="469">Falsifiable hypotheses + parents</text>
+  <text x="44" y="493">Immutable candidate snapshots</text>
+  <text x="44" y="517">Full-cohort validation repeats</text>
+  <text class="muted" x="44" y="544">Screens ≠ final submissions</text>
+
+  <path class="flow" d="M475 393 V445"/>
+  <text class="muted" x="488" y="424">Save</text>
+  <rect class="node" x="360" y="445" width="230" height="104" rx="6"/>
+  <text class="heading" x="380" y="474">Saved tensor edits</text>
+  <text x="380" y="500">Parameters + edit manifest</text>
+  <text class="muted" x="380" y="526">Bridge model instances</text>
+  <path class="flow" d="M590 496 H686"/>
+  <text class="muted" x="638" y="484" text-anchor="middle">Load</text>
+  <rect class="node" x="686" y="445" width="290" height="104" rx="6"/>
+  <text class="heading" x="706" y="474">Simulation policy worker</text>
+  <text x="706" y="500">Separate policy model instance</text>
+  <text class="muted" x="706" y="526">Budgeted simulator / task rollouts</text>
+  <path class="flow" d="M953 445 V393"/>
+  <text class="muted" x="932" y="413" text-anchor="end">Recorded observations, actions, inputs,</text>
+  <text class="muted" x="932" y="433" text-anchor="end">noise, hooks, outcomes</text>
+
+  <path class="flow" d="M154 564 V604"/>
+  <rect class="node lab" x="24" y="604" width="260" height="84" rx="6"/>
+  <text class="heading" x="44" y="634">Selected weights</text>
+  <text x="44" y="660">Best eligible dev improvement</text>
+  <text class="muted" x="44" y="680">or unchanged base</text>
+
+  <rect class="controller" x="360" y="580" width="616" height="108" rx="6"/>
+  <text class="heading" x="380" y="605">Optional controller · fork → select → exploit</text>
+  <text x="380" y="629">K = 4 isolated fresh workspaces · currently sequential waves</text>
+  <text x="380" y="652">Select validated lineage → resume winner’s same conversation</text>
+  <text class="muted" x="380" y="675">Repeat at 33% / 66% aggregate dev episodes · losing branches count</text>
+  <path class="flow control" d="M360 634 H322 V339 H284"/>
+  <text class="muted" x="360" y="710">Default: sequential flush-only · weight edits, not gradient fitting / LoRA</text>
+
+  <path class="boundary" d="M24 731 H976"/>
+  <text class="boundary-label" x="360" y="752">03 / HELD OUT · OUTSIDE THE AGENT LOOP</text>
+  <path class="flow" d="M154 688 V765"/>
+  <text class="muted" x="171" y="722">Freeze</text>
+  <rect class="node" x="24" y="765" width="952" height="65" rx="6"/>
+  <line class="divider" x1="552" y1="779" x2="552" y2="817"/>
+  <text class="heading" x="44" y="791">Independent held-out evaluator</text>
+  <text x="44" y="813">Paired base vs. frozen edit · held-out layouts</text>
+  <text x="574" y="790">No held-out feedback to the agent</text>
+  <text class="muted" x="574" y="813">Additional checks ≠ universal guarantees</text>
+</svg>

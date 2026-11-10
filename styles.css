@@ -71,11 +71,6 @@ h1 span { color: var(--green); font-style: italic; }
 .section-heading .eyebrow { margin-bottom: 17px; }
 .section-heading h2 { font-size: clamp(32px, 3.3vw, 46px); letter-spacing: -.04em; font-weight: 500; }
 .section-intro { font-size: 15px; color: var(--muted); max-width: 540px; }
-.method-figure { background: var(--white); border: 1px solid var(--line); padding: 25px 24px 20px; overflow-x: auto; border-radius: var(--radius); }
-.figure-topline { display: flex; justify-content: space-between; gap: 20px; font-size: 10px; font-weight: 650; letter-spacing: .1em; color: var(--green); }
-.boundary-label { color: #88572f; }
-.method-diagram { display: block; width: 100%; min-width: 760px; height: auto; }
-figcaption { font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 15px; }
 .protocol-strip { display: grid; grid-template-columns: .7fr .7fr 1.6fr; gap: 25px; padding: 27px 0; border-bottom: 1px solid var(--line); }
 .protocol-strip > div { display: flex; flex-direction: column; border-right: 1px solid var(--line); }
 .protocol-value { font-family: Georgia, serif; font-size: 34px; line-height: 1.2; color: var(--green); }
@@ -95,22 +90,29 @@ summary { cursor: pointer; }
 .protocol-details ol { padding-left: 22px; color: var(--muted); }
 .protocol-details li { padding-left: 10px; margin-block: 15px; }
 .protocol-details li strong { color: var(--ink); display: block; }
-.architecture-diagram { display: block; width: 100%; min-width: 900px; height: auto; color: var(--green); }
-.architecture-box { fill: var(--white); stroke: var(--line); }
-.architecture-lab { fill: var(--soft-green); stroke: var(--line); }
-.architecture-label { fill: var(--ink); font-family: "Segoe UI", sans-serif; font-size: 14px; }
-.architecture-title { font-size: 17px; font-weight: 650; }
-.architecture-arrows { fill: none; stroke: var(--green); stroke-width: 1.8; }
-.architecture-boundary { fill: none; stroke: var(--orange); stroke-width: 2; stroke-dasharray: 6 5; }
-.architecture-boundary-label { fill: var(--orange); font-size: 13px; font-family: "Segoe UI", sans-serif; font-weight: 650; letter-spacing: .05em; }
-.architecture-evaluator { fill: var(--soft-orange); stroke: var(--line); }
-.architecture-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr)); gap: 30px 50px; margin-block: 35px; }
-.architecture-details p, .architecture-tools p { font-size: 14px; color: var(--muted); margin-top: 12px; }
-.architecture-details code, .architecture-tools code { color: var(--green); font-size: .92em; overflow-wrap: anywhere; }
+.architecture-status { border-left: 3px solid var(--green); padding: 15px 20px; margin-bottom: 28px; background: var(--soft-green); font-size: 13px; }
+.architecture-status > strong { color: var(--green); }
+.architecture-status p { margin-top: 6px; color: var(--muted); }
+.architecture-figure { min-width: 0; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+.architecture-scroll { max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; }
+.architecture-diagram { display: block; width: 100%; min-width: 1000px; max-width: 1000px; height: auto; margin-inline: auto; }
+.architecture-figure figcaption { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 16px; color: var(--muted); font-size: 13px; }
+.architecture-figure figcaption strong { color: var(--ink); font-weight: 600; }
+.figure-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; margin-top: 12px; font-size: 12px; }
+.figure-actions a { color: var(--green); padding-block: 6px; }
+.architecture-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr)); gap: 32px 50px; margin-block: 38px; }
+.architecture-details article { border-top: 1px solid var(--line); padding-top: 22px; min-width: 0; }
+.architecture-details p, .architecture-tools p, .architecture-controller > p { font-size: 14px; color: var(--muted); margin-top: 12px; }
+.architecture-details strong, .architecture-controller strong { color: var(--ink); font-weight: 600; }
+.architecture-details code, .architecture-tools code, .architecture-controller code { color: var(--green); font-size: .92em; overflow-wrap: anywhere; }
+.architecture-controller { padding: 26px; margin-bottom: 32px; border: 1px solid var(--line); border-radius: var(--radius); }
+.controller-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px 26px; }
+.architecture-controller .protocol-details { margin-top: 12px; }
+.architecture-controller .protocol-details p { color: var(--muted); margin-top: 10px; }
 .architecture-tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; }
 .architecture-tools article { padding: 22px; border-radius: var(--radius); background: var(--soft-green); }
 .architecture-tools h3 { font-size: 16px; }
-.architecture-note { font-size: 12px; color: var(--muted); margin-top: 20px; }
+.architecture-note { font-size: 13px; color: var(--muted); margin-top: 20px; }
 .results-section { background: #efeee8; }
 .metrics-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin-bottom: 24px; }
 .metric { padding: 24px; background: var(--paper); }
@@ -230,9 +232,10 @@ progress::-moz-progress-bar { background: #6b8860; }
   .section-heading { grid-template-columns: 1fr; gap: 22px; margin-bottom: 30px; }
   .section-heading h2 { font-size: 36px; }
   .section-intro { font-size: 14px; }
-  .method-figure { padding: 18px 14px; }
-  .figure-topline { min-width: 760px; font-size: 9px; }
-  .method-figure figcaption { min-width: 0; position: sticky; left: 0; width: calc(100vw - 66px); font-size: 11px; }
+  .architecture-figure { padding: 16px 12px; }
+  .architecture-figure figcaption { font-size: 12px; }
+  .architecture-status, .architecture-controller { padding: 18px; }
+  .architecture-details { gap: 26px; margin-block: 28px; }
   .protocol-strip { grid-template-columns: 1fr 1fr; gap: 20px; }
   .protocol-strip > div:nth-child(2) { border: 0; }
   .protocol-strip p { grid-column: span 2; }
@@ -262,9 +265,11 @@ progress::-moz-progress-bar { background: #6b8860; }
   body { font-size: 11px; background: white; }
   .section-shell { width: 100%; }
   .section-block { padding-block: 25px; }
-  .table-scroll, .method-figure { overflow: visible; }
+  .table-scroll, .architecture-scroll { overflow: visible; }
   .results-table { min-width: 0; font-size: 9px; }
   .results-table td, .results-table th { padding: 6px; }
-  .method-diagram { min-width: 0; }
+  .architecture-diagram { min-width: 0; max-width: 100%; }
+  .architecture-figure { padding: 10px; break-inside: avoid; }
+  .figure-actions { display: none; }
   .experiment-card, .policy-card, .caveat { break-inside: avoid; }
 }
